@@ -1,8 +1,8 @@
-import * as THREE from 'https://mr-yak.github.io/sports/node_modules/three';
+import * as THREE from 'three';
 
 
-import { OrbitControls } from 'https://mr-yak.github.io/sports/node_modules/three/examples/jsm/controls/OrbitControls';
-import { GLTFLoader } from 'https://mr-yak.github.io/sports/node_modules/three/examples/jsm/loaders/GLTFLoader.js';
+import { OrbitControls } from 'https://unpkg.com/three@0.140.2/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'https://unpkg.com/three@0.140.2/examples/jsm/loaders/GLTFLoader.js';
 
 var mousex,mousey;
 var ball;
