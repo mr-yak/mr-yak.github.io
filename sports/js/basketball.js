@@ -1,4 +1,4 @@
-import * as THREE from "/three" ;
+import * as THREE from "/three";
 
 import { OrbitControls } from '/three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from '/three/examples/jsm/loaders/GLTFLoader';
@@ -12,6 +12,7 @@ const body =document.getElementById("body")
 const canvas = document.querySelector('#bg')
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, (canvas.clientWidth) / (canvas.clientHeight), 0.1, 1000 );
+
 const renderer = new THREE.WebGLRenderer({
 	canvas: document.querySelector('#bg'),
 });
