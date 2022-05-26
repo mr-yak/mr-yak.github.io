@@ -240,3 +240,8 @@ table.center {
   width: 480px;
   padding:0px;
 }
+
+.feed_cell{
+  height:340px;
+  width:1440px;
+}
