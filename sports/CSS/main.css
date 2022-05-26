@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+* {
+  box-sizing:border-box
+}
+
+body{
+  margin:0px;
+  background-color: #292f33;
+}
+
+.header{
+    height: 80px;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+.title_bar{
+    position:absolute;
+    text-align: center;
+    background-color: black;
+    font-size: 28px;
+    color:white;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 22px;
+    margin-top: 22px;
+    padding-left: 40px;
+}
+
+.nav_menu{
+    width:fit-content;
+    height: fit-content;
+    display:inline;
+    float:right;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    padding-right:30px;
+}
+
+.nav{
+    display: inline;
+    height:40px;
+    background-color: black;
+}
+
+
+.nav_content:hover{
+    color: yellow;
+}
+
+.nav_content{
+  height:100%;
+  width:100%;
+}
+
+table{
+    float:right;
+    width:100%;
+    height:100%;
+}
+
+.nav_button{
+    
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding-left:40px;
+    
+}
+
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slideshow {
+  display: block;
+  align-items: center;
+  position: absolute;
+  height:33%;
+  width:100%;
+  margin: auto;
+}
+
+.slideshow-container{
+  display: block;
+}
+
+.slide {
+  display: none;
+  width:100%;
+  position:absolute;
+  
+}
+
+.prev, .next {
+  cursor: pointer;
+  display:table-cell;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot-container{
+  text-align:center;
+  display:block;
+  background-color: #292f33;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+@keyframes scrollInUp {
+  from {transform: translateX(100%);}
+  to {transform: translate(0%);}
+}
+
+@keyframes scrollInDown {
+    from {transform: translateX(-100%);}
+    to {transform: translateX(0%);}
+  }
+
+@keyframes scrollOutUp {
+    from {transform: translateX(0%);}
+    to {transform: translate(-100%);}
+ }
+  
+@keyframes scrollOutDown {
+    from {transform: translateX(0%);}
+    to {transform: translateX(100%);}
+}
+
+
+.footer{
+  display: inline-block;
+  position:relative;
+  padding:20px;
+  padding-right:50px;
+  padding-bottom: 0px;
+  height:175px;
+  width:100%;
+  background-color: #515151;
+}
+
+
+.links{
+  font-family: 'Nanum Gothic', sans-serif;
+  font-size: 12px;
+}
+
+.links a:link{
+  color: yellow;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.links a:visited{
+  color:yellow;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.links a:hover{
+  color: white;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.links a:active{
+  color: blue;
+  font-style: normal;
+  text-decoration: none;
+} 
+
+.heading{
+  font-family: 'Playfair Display', serif;
+  font-weight: bolder;
+  font-size: 20px;
+  float:right;
+  margin:0px;
+}
+
+.footer_content{
+  float:right;
+  display:inline;
+  text-align: right;
+}
+
+.link{
+  position:relative;
+  padding-top: 10px;
+  padding-bottom: 10px; 
+}
+
+.nav_link{
+  text-decoration: none;
+  color: white
+}
