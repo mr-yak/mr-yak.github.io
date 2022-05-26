@@ -235,3 +235,7 @@ table.center {
   text-decoration: none;
   color: white
 }
+
+.feed-cell{
+  width: 33.3%;
+}
