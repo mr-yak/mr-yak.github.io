@@ -242,7 +242,7 @@ table.center {
 }
 
 .feed{
-  display:relative;
+  position:relative;
   height:340px;
   width:1440px;
 }
