@@ -242,6 +242,7 @@ table.center {
 }
 
 .feed{
+  display:relative;
   height:340px;
   width:1440px;
 }
