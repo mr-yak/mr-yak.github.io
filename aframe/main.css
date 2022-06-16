@@ -30,3 +30,15 @@
       height:40px;
       background-color: black;
   }
+
+  .table{
+      padding:40px;
+  }
+
+  .row {
+      padding: 1px;
+  }
+
+  .cell{
+      padding: 1px;
+  }
