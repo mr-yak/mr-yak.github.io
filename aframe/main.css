@@ -17,15 +17,12 @@
   }
   
   .title_bar{
-      position:absolute;
       text-align: center;
       background-color: black;
-      font-size: 28px;
+      font-size: 32px;
       color:white;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 22px;
-      margin-top: 22px;
-      padding-left: 40px;
+      font-family: 'Playfair Display', sans-serif;
+      padding-top: 20px;
   }
   
   .nav{
