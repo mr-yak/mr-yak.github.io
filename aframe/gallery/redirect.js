@@ -24,7 +24,7 @@ AFRAME.registerComponent('info-panel', {
       if (AFRAME.utils.device.isMobile()) { this.el.object3D.scale.set(1.4, 1.4, 1.4); }
       this.el.object3D.visible = true;
       this.fadeBackgroundEl.object3D.visible = true;
-  
+      window.location.href = "../index.html";
     },
   
     onBackgroundClick: function (evt) {
