@@ -2,12 +2,12 @@
 AFRAME.registerComponent('highlight', {
     init: function () {
       var buttonEls = this.buttonEls = this.el.querySelectorAll('.menu-button');
-      var backgroundEl = document.querySelector('#background');
+      //var backgroundEl = document.querySelector('#background');
       this.onClick = this.onClick.bind(this);
       this.onMouseEnter = this.onMouseEnter.bind(this);
       this.onMouseLeave = this.onMouseLeave.bind(this);
-      this.reset = this.reset.bind(this);
-      backgroundEl.addEventListener('click', this.reset);
+      //this.reset = this.reset.bind(this);
+      //backgroundEl.addEventListener('click', this.reset);
       for (var i = 0; i < buttonEls.length; ++i) {
         buttonEls[i].addEventListener('mouseenter', this.onMouseEnter);
         buttonEls[i].addEventListener('mouseleave', this.onMouseLeave);
@@ -16,6 +16,7 @@ AFRAME.registerComponent('highlight', {
     },
   
     onClick: function (evt) {
+      window.location.href = "../index.html";
       evt.target.pause();
       evt.target.setAttribute('material', 'color', '#046de7');
       this.el.addState('clicked');
@@ -32,16 +33,16 @@ AFRAME.registerComponent('highlight', {
     },
   
     onMouseLeave: function (evt) {
-      if (this.el.is('clicked')) { return; }
+      //if (this.el.is('clicked')) { return; }
       evt.target.setAttribute('material', 'color', 'white');
     },
   
-    reset: function () {
+  /*  reset: function () {
       var buttonEls = this.buttonEls;
       for (var i = 0; i < buttonEls.length; ++i) {
         this.el.removeState('clicked');
         buttonEls[i].play();
         buttonEls[i].emit('mouseleave');
       }
-    }
+    }*/
   });

@@ -3,10 +3,9 @@
     <head>
         <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
         <script src="highlight.js"></script>
-        <script src="redirect.js"></script>
     </head>
     <body>
-        <a-scene background="color: #212"
+        <a-scene
         environment
         cursor="rayOrigin: mouse; fuse: false" raycaster="objects: .raycastable"
         info-message="htmlSrc: #messageText">
@@ -19,23 +18,10 @@
                     rotation="0 0 0">
             </a-text>
 
-            <a-entity
-            id="background"
-            position="0 0 0"
-            geometry="primitive: sphere; radius: 2.0"
-            material="color: red; side: back; shader: flat"
-            scale="0.001 0.001 0.001"
-            visible="false" class="raycastable">
-            </a-entity>
     
           <a-entity
             position="0 1.6 0"
             camera look-controls="magicWindowTrackingEnabled: false; touchEnabled: false; mouseEnabled: false">
-            <a-entity
-              id="fadeBackground"
-              geometry="primitive: sphere; radius: 2.5"
-              material="color: black; side: back; shader: flat; transparent: true; opacity: 0.6" visible="false">
-            </a-entity>
           </a-entity>
     
             <a-mixin
@@ -52,6 +38,7 @@
             material="shader: flat"
             position="0 0 0.005"
             ></a-mixin>
+
             <a-entity id="leftHand" laser-controls="hand: left" raycaster="objects: .raycastable"></a-entity>
             <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
