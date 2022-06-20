@@ -13,6 +13,7 @@ AFRAME.registerComponent('highlight', {
     },
   
     onClick: function (evt) {
+      alert(gone);
       //window.location.href = "../index.html";
     },
   
