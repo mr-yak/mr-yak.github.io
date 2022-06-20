@@ -6,15 +6,16 @@
         <script src="main.js"></script>
     </head>
     <body>
-        <a-scene>
+        <a-scene background="color:#333333;">
             <a-entity
-              id="Photo plane"
+              id="photoPlane"
               position="0 2.0 -1"
-              rotation="45 45 0"
+              rotation="0 0 0"
               geometry="primitive: plane; height: 1; width: 1.78;"
-              material="color: #ff4b5c"
+              material="color: #ffffff"
             ></a-entity>
             <a-entity id="menu" menu position="0 1.5 -0.5" rotation="-45 0 0">
+              <a-entity geometry="primitive:box; width:0.6; height:0.4; depth:0.01" material="color:gray;" position="0 0 -0.025"></a-entity>
               <a-entity id="nextButton" button="label: Next" position="-0.15 0 0"></a-entity>
               <a-entity id="enterButton" button="label: Travel" position="0 0 0"></a-entity>
               <a-entity id="backButton"button="label: Back" position="0.15 0 0"></a-entity>
