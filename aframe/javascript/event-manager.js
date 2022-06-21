@@ -22,8 +22,8 @@ AFRAME.registerComponent('event-manager', {
         0: "assets/Art.JPG",
         1: "assets/Bush.JPG",
       };
-      
-      this.screenEl.getAttribute("material").src = thumbnailMap[picId];
+
+      this.screenEl.getAttribute("material").src = this.thumbnailMap[picId];
     },
     
   
