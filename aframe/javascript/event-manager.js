@@ -14,8 +14,6 @@ AFRAME.registerComponent('event-manager', {
       this.enterButtonEl.addEventListener('click', this.onClick);
       this.backButtonEl.addEventListener('click', this.onClick);
 
-      this.screenEl.getAttribute("material").src = thumbnailMap[picId];
-
       this.linkMap = {
         0: "gallery/art.html",
         1: "gallery/bush.html",
@@ -24,7 +22,10 @@ AFRAME.registerComponent('event-manager', {
         0: "assets/Art.JPG",
         1: "assets/Bush.JPG",
       };
+      
+      this.screenEl.getAttribute("material").src = thumbnailMap[picId];
     },
+    
   
     bindMethods: function () {
       this.onClick = this.onClick.bind(this);
