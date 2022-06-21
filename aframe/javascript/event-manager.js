@@ -49,7 +49,7 @@ AFRAME.registerComponent('event-manager', {
             targetEl.addState('pressed');
 
         }
-        //change Picture
-        this.screenEl.getAttribute("material").src = thumbnailMap[picId];
+        //change Picture add animations
+        this.screenEl.getAttribute("material").src = this.thumbnailMap[picId];
     }
   });
