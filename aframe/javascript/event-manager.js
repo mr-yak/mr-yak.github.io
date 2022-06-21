@@ -23,7 +23,7 @@ AFRAME.registerComponent('event-manager', {
         1: "assets/Bush.JPG",
       };
 
-      this.screenEl.getAttribute("material").src = this.thumbnailMap[picId];
+      this.screenEl.getAttribute("material").src = this.thumbnailMap[this.picId];
     },
     
   
@@ -46,11 +46,11 @@ AFRAME.registerComponent('event-manager', {
             this.picId=0;
         }
         if(targetEl==this.enterButtonEl){
-            window.location.href = this.linkMap[picId];
+            window.location.href = this.linkMap[this.picId];
             targetEl.addState('pressed');
 
         }
         //change Picture add animations
-        this.screenEl.getAttribute("material").src = this.thumbnailMap[picId];
+        this.screenEl.getAttribute("material").src = this.thumbnailMap[this.picId];
     }
   });
