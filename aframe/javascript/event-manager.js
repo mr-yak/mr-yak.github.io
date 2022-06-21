@@ -19,8 +19,8 @@ AFRAME.registerComponent('event-manager', {
         1: "gallery/bush.html",
       };
       this.thumbnailMap = {
-        0: "aframe/assets/Art.JPG",
-        1: "aframe/assets/Bush.JPG",
+        0: "assets/Art.JPG",
+        1: "assets/Bush.JPG",
       };
       this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
     },
