@@ -19,12 +19,10 @@ AFRAME.registerComponent('event-manager', {
         1: "gallery/bush.html",
       };
       this.thumbnailMap = {
-        0: "../assets/Art.JPG",
-        1: "../assets/Bush.JPG",
+        0: "/assets/Art.JPG",
+        1: "/assets/Bush.JPG",
       };
-      console.log(this.thumbnailMap[this.picId]);
-      console.log(this.screenEl.getAttribute("material"));
-      this.screenEl.getAttribute("material").src = this.thumbnailMap[this.picId];
+      this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
     },
     
   
@@ -52,6 +50,6 @@ AFRAME.registerComponent('event-manager', {
 
         }
         //change Picture add animations
-        this.screenEl.getAttribute("material").src = this.thumbnailMap[this.picId];
+        this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
     }
   });
