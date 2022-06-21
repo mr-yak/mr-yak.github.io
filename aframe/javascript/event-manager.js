@@ -5,7 +5,7 @@ AFRAME.registerComponent('event-manager', {
       this.picCount = 2;
       this.bindMethods();
 
-      this.screenEl = document.querySelector('#photoPlane')
+      this.screenEl = document.querySelector('#photoPlane');
       this.nextButtonEl = document.querySelector('#nextButton');
       this.enterButtonEl = document.querySelector('#enterButton');
       this.backButtonEl = document.querySelector('#backButton');
