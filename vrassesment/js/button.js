@@ -7,15 +7,22 @@ AFRAME.registerComponent('button', {
     init: function () {
       var el = this.el;
       var labelEl = this.labelEl = document.createElement('a-entity');
-  
-      this.color = '#3a50c5';
+      if(this.data.type == 0){
+        this.color = '#00ff00';
+        el.setAttribute('geometry', {
+          primitive: 'cylinder',
+          radius: this.data.radius,
+          depth: 0.04
+        });
+     }
+     else if(this.data.type == 1){
+      this.color = '#ff0000';
       el.setAttribute('geometry', {
-        primitive: 'box',
-        width: this.data.width,
-        height: 0.05,
-        depth: 0.04
+        primitive: 'cylinder',
+        radius: this.data.radius,
+        depth: 0.1
       });
-  
+   }
       el.setAttribute('material', {color: this.color});
       el.setAttribute('pressable', '');
   
