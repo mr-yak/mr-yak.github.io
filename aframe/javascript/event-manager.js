@@ -30,7 +30,7 @@ AFRAME.registerComponent('event-manager', {
       this.onClick = this.onClick.bind(this);
     },
   
-    onClick: function (evt) { //Button Click handeler
+    onClick: function (evt) { //Button Click handler
       var targetEl = evt.target;
         if(targetEl==this.nextButtonEl){
             this.picID += 1;
