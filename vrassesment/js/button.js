@@ -11,18 +11,18 @@ AFRAME.registerComponent('button', {
         this.color = '#00ff00';
         el.setAttribute('geometry', {
           primitive: 'cylinder',
-          radius: this.data.radius,
+          radius: 0.2,
           depth: 0.04
         });
-     }
-     else if(this.data.type == 1){
-      this.color = '#ff0000';
-      el.setAttribute('geometry', {
-        primitive: 'cylinder',
-        radius: this.data.radius,
-        depth: 0.1
-      });
-   }
+      }
+      else if(this.data.type == 1){
+          this.color = '#ff0000';
+          el.setAttribute('geometry', {
+            primitive: 'cylinder',
+            radius: 0.2,
+            depth: 0.1
+          });
+      }
       el.setAttribute('material', {color: this.color});
       el.setAttribute('pressable', '');
   
