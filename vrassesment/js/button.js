@@ -15,6 +15,9 @@ AFRAME.registerComponent('button', {
           height: 0.02
         });
         labelEl.setAttribute('position', '0 0.01 0.05');
+        labelEl.setAttribute('material', {
+          src: 'assets/misc/arrow.png'
+        });
       }
       else if(el.getAttribute('type') == 1){
           this.color = '#ff0000';
@@ -24,17 +27,18 @@ AFRAME.registerComponent('button', {
             height: 0.04
           });
           labelEl.setAttribute('position', '0 0.02 0.05');
+          labelEl.setAttribute('text', {
+            value: this.data.label,
+            color: 'white',
+            align: 'center'
+          });
       }
       el.setAttribute('material', {color: this.color});
       el.setAttribute('pressable', '');
   
       labelEl.setAttribute('rotation', '-90 0 0');
       console.log(labelEl)
-      labelEl.setAttribute('text', {
-        value: this.data.label,
-        color: 'white',
-        align: 'center'
-      });
+
   
       labelEl.setAttribute('scale', '0.75 0.75 0.75');
       this.el.appendChild(labelEl);
