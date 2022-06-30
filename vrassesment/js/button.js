@@ -23,12 +23,11 @@ AFRAME.registerComponent('button', {
             height: 0.04
           });
       }
-      console.log(el);
-      console.log(this);
       el.setAttribute('material', {color: this.color});
       el.setAttribute('pressable', '');
   
-      labelEl.setAttribute('position', '0 0 0.02');
+      labelEl.setAttribute('position', '0 0 0.05');
+      console.log(labelEl)
       labelEl.setAttribute('text', {
         value: this.data.label,
         color: 'white',
