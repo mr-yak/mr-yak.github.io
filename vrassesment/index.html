@@ -7,7 +7,7 @@
     </head>
     <body>
         <a-scene background="color:#333333;">
-          <!--<a-sky src="assets/misc/void.jpeg" rotation="0 0 0"></a-sky> IMPROVE RESOLUTION-->
+          <a-sky src="assets/misc/stars.jpg" rotation="0 0 0"></a-sky> 
             <a-camera wasd-controls-enabled="true"></a-camera>
             <a-entity
               id="photoPlane"
@@ -25,9 +25,9 @@
             <!--REDO NAV CHART WITH MORE DESCRIPTIVE PAGE NAMES-->
             <a-entity id="menu" menu position="0 1.5 -0.5" rotation="-45 0 0" event-manager>
               <a-entity geometry="primitive:box; width:0.6; height:0.4; depth:0.01" material="color:gray;" position="0 0 -0.025"></a-entity>
-              <a-entity id="nextButton" button="label: Next" type="0" position="-0.15 0 0" rotation="0 0 90"></a-entity>
-              <a-entity id="enterButton" button="label: Launch!" type="1" position="0 0 0" rotation="0 0 90"></a-entity>
-              <a-entity id="backButton" button="label: Back" type="0" position="0.15 0 0" rotation="0 0 90"></a-entity>
+              <a-entity id="nextButton" button="label: Next" type="0" position="-0.15 0 0" rotation="90 0 90"></a-entity>
+              <a-entity id="enterButton" button="label: Launch!" type="1" position="0 0 0" rotation="90 0 90"></a-entity>
+              <a-entity id="backButton" button="label: Back" type="0" position="0.15 0 0" rotation="90 0 90"></a-entity>
             </a-entity>
             <a-entity hand-tracking-controls="hand: right"></a-entity>
           </a-scene>
