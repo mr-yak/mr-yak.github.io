@@ -18,16 +18,59 @@
             ></a-entity>
             <!--ADD FAVICONS-->
             <!--ADD INFO PANES WITH TXT AS CHILDEREN-->
-            <a-plane position="-6 2 -1" rotation="0 70 0" width="4" height="5" color="#7BC8A4"></a-plane>
-            <a-plane position="6 2 -1" rotation="0 290 0" width="4" height="5" color="#7BC8A4"></a-plane>
-
+            <a-plane position="-6 2 -1" rotation="0 70 0" width="4" height="5" material="color: #606060, opacity: 0.5">
+              <a-text 
+              font="kelsonsans" 
+              value="Zone" 
+              width="6" 
+              position="2.5 0.25 1.5"
+              rotation="0 0 0">
+              </a-text>
+              <a-text 
+              font="kelsonsans" 
+              value="Loading..." 
+              width="6" 
+              position="2.5 0.25 1.5"
+              rotation="0 0 0">
+              </a-text>
+              <a-text 
+              font="kelsonsans" 
+              value="Landing Spot:" 
+              width="6" 
+              position="2.5 0.25 1.5"
+              rotation="0 0 0">
+              </a-text>
+              <a-text 
+              font="kelsonsans" 
+              value="Loading..." 
+              width="6" 
+              position="2.5 0.25 1.5"
+              rotation="0 0 0">
+              </a-text>
             </a-plane>
+            <a-plane position="6 2 -1" rotation="0 290 0" width="4" height="5" material="color: #606060, opacity: 0.5">
+              <a-text 
+              font="kelsonsans" 
+              value="Info:" 
+              width="6" 
+              position="2.5 0.25 1.5"
+              rotation="0 0 0">
+              </a-text>
+              <a-text 
+              font="kelsonsans" 
+              value="Loading..." 
+              width="6" 
+              position="2.5 0.25 1.5"
+              rotation="0 0 0">
+              </a-text>
+            </a-plane>
+            <a-cylinder id="ground" position="0 -1 0", radius="6" height="0.01" color="#303030"></a-cylinder>
             <!--REDO NAV CHART WITH MORE DESCRIPTIVE PAGE NAMES-->
             <a-entity id="menu" menu position="0 1.5 -0.5" rotation="-45 0 0" event-manager>
               <a-entity geometry="primitive:box; width:0.6; height:0.4; depth:0.01" material="color:gray;" position="0 0 -0.025"></a-entity>
-              <a-entity id="nextButton" button="label: Next" type="0" position="-0.15 0 0" rotation="90 0 90"></a-entity>
-              <a-entity id="enterButton" button="label: Launch!" type="1" position="0 0 0" rotation="90 0 90"></a-entity>
-              <a-entity id="backButton" button="label: Back" type="0" position="0.15 0 0" rotation="90 0 90"></a-entity>
+              <a-entity id="nextButton" button="label: Next" type="0" position="-0.3 0 0" rotation="90 0 0"></a-entity>
+              <a-entity id="enterButton" button="label: Launch!" type="1" position="0 0 0" rotation="90 0 0"></a-entity>
+              <a-entity id="backButton" button="label: Back" type="0" position="0.3 0 0" rotation="90 0 0"></a-entity>
             </a-entity>
             <a-entity hand-tracking-controls="hand: right"></a-entity>
           </a-scene>
