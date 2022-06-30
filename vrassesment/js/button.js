@@ -16,9 +16,8 @@ AFRAME.registerComponent('button', {
         });
         labelEl.setAttribute('position', '0 0.01 0');
         labelEl.setAttribute('rotation', '-90 0 0');
-        labelEl.setAttribute('material', {
-          src: 'assets/misc/arrow.png',
-        });
+        labelEl.setAttribute('geometry', "primitive: plane; height: 0.08; width: 0.08;")
+        labelEl.setAttribute('material', 'src', 'assets/misc/arrow.png');
         this.el.appendChild(labelEl);
       }
       else if(el.getAttribute('type') == 1){
