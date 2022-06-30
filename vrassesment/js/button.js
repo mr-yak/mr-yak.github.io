@@ -19,6 +19,7 @@ AFRAME.registerComponent('button', {
         labelEl.setAttribute('material', {
           src: 'assets/misc/arrow.png',
         });
+        this.el.appendChild(labelEl);
       }
       else if(el.getAttribute('type') == 1){
           this.color = '#ff0000';
@@ -34,12 +35,10 @@ AFRAME.registerComponent('button', {
             color: 'white',
             align: 'center'
           });
-          
+          this.el.appendChild(labelEl);
       }
       el.setAttribute('material', {color: this.color});
       el.setAttribute('pressable', '');
-      this.el.appendChild(labelEl);
-  
       this.bindMethods();
       this.el.addEventListener('stateadded', this.stateChanged);
       this.el.addEventListener('stateremoved', this.stateChanged);
