@@ -7,7 +7,7 @@ AFRAME.registerComponent('button', {
     init: function () {
       var el = this.el;
       var labelEl = this.labelEl = document.createElement('a-entity');
-      if(el.getAttribute(type) == 0){
+      if(el.getAttribute('type') == 0){
         this.color = '#00ff00';
         el.setAttribute('geometry', {
           primitive: 'cylinder',
@@ -15,7 +15,7 @@ AFRAME.registerComponent('button', {
           depth: 0.04
         });
       }
-      else if(el.getAttribute(type) == 1){
+      else if(el.getAttribute('type') == 1){
           this.color = '#ff0000';
           el.setAttribute('geometry', {
             primitive: 'cylinder',
