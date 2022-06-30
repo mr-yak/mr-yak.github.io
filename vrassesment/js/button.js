@@ -23,6 +23,8 @@ AFRAME.registerComponent('button', {
             depth: 0.1
           });
       }
+      console.log(el);
+      console.log(this);
       el.setAttribute('material', {color: this.color});
       el.setAttribute('pressable', '');
   
