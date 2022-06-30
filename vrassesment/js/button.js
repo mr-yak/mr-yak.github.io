@@ -15,9 +15,9 @@ AFRAME.registerComponent('button', {
           height: 0.02
         });
         labelEl.setAttribute('position', '0 0.01 0');
+        labelEl.setAttribute('rotation', '-90 0 0');
         labelEl.setAttribute('material', {
           src: 'assets/misc/arrow.png',
-          color: this.color
         });
       }
       else if(el.getAttribute('type') == 1){
@@ -28,21 +28,16 @@ AFRAME.registerComponent('button', {
             height: 0.04
           });
           labelEl.setAttribute('position', '0 0.02 0');
+          labelEl.setAttribute('rotation', '-90 0 0');
           labelEl.setAttribute('text', {
             value: this.data.label,
             color: 'white',
             align: 'center'
           });
-          el.setAttribute('material', {color: this.color});
+          
       }
-
+      el.setAttribute('material', {color: this.color});
       el.setAttribute('pressable', '');
-  
-      labelEl.setAttribute('rotation', '-90 0 0');
-      console.log(labelEl)
-
-  
-      labelEl.setAttribute('scale', '0.75 0.75 0.75');
       this.el.appendChild(labelEl);
   
       this.bindMethods();
@@ -84,6 +79,6 @@ AFRAME.registerComponent('button', {
   
     onPressedEnded: function () {
       if (this.el.is('pressed')) { return; }
-      //this.el.setAttribute('material', {color: this.color});
+        this.el.setAttribute('material', {color: this.color});
     }
   });
