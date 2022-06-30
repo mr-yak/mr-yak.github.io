@@ -11,16 +11,16 @@ AFRAME.registerComponent('button', {
         this.color = '#00ff00';
         el.setAttribute('geometry', {
           primitive: 'cylinder',
-          radius: 0.2,
-          depth: 0.04
+          radius: 0.04,
+          height: 0.02
         });
       }
       else if(el.getAttribute('type') == 1){
           this.color = '#ff0000';
           el.setAttribute('geometry', {
             primitive: 'cylinder',
-            radius: 0.2,
-            depth: 0.1
+            radius: 0.08,
+            height: 0.04
           });
       }
       console.log(el);
