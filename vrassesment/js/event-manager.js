@@ -63,6 +63,9 @@ AFRAME.registerComponent('event-manager', {
         6: "Lucas Creek"
       };
       this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
+      infoTXT.setAttribute('value', this.infoMap[this.picId]);
+      zoneTXT.setAttribute('value', this.areaMap[this.picId]);
+      spotTXT.setAttribute('value', this.titleMap[this.picId]);
     },
     
   
@@ -72,6 +75,9 @@ AFRAME.registerComponent('event-manager', {
   
     onClick: function (evt) { //Button Click handler
       var targetEl = evt.target;
+      var infoTXT = document.getElementById("infoContent");
+      var zoneTXT = document.getElementById("zoneContent");
+      var spotTXT = document.getElementById("spotContent");
         if(targetEl==this.nextButtonEl){
             this.picID += 1;
         }
@@ -91,7 +97,9 @@ AFRAME.registerComponent('event-manager', {
         }
         //change Picture
         this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
-        //add text changer
+        infoTXT.setAttribute('value', this.infoMap[this.picId]);
+        zoneTXT.setAttribute('value', this.areaMap[this.picId]);
+        spotTXT.setAttribute('value', this.titleMap[this.picId]);
     }
   });
 
