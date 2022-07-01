@@ -14,7 +14,7 @@ AFRAME.registerComponent('button', {
           radius: 0.04,
           height: 0.02
         });
-        labelEl.setAttribute('position', '0 0.015 -0.05');
+        labelEl.setAttribute('position', '-0.01 0.012 -0.01');
         if(el.getAttribute('type')==0){
           labelEl.setAttribute('rotation', '-90 0 0');
         }
