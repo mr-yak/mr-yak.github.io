@@ -7,17 +7,24 @@ AFRAME.registerComponent('button', {
     init: function () {
       var el = this.el;
       var labelEl = this.labelEl = document.createElement('a-entity');
-      if(el.getAttribute('type') == 0){
+      if(el.getAttribute('type') == 0 || el.getAttribute('type') == 2){
         this.color = '#00ff00';
         el.setAttribute('geometry', {
           primitive: 'cylinder',
           radius: 0.04,
           height: 0.02
         });
-        labelEl.setAttribute('position', '0 0.01 0');
-        labelEl.setAttribute('rotation', '-90 0 0');
+        labelEl.setAttribute('position', '0 0.011 0');
+        if(el.getAttribute('type')==0){
+          labelEl.setAttribute('rotation', '-90 0 0');
+        }
+        else{
+          labelEl.setAttribute('rotation', '-90 180 0');
+        }
         labelEl.setAttribute('geometry', "primitive: plane; height: 0.08; width: 0.08;")
         labelEl.setAttribute('material', 'src', 'assets/misc/arrow.png');
+        labelEl.setAttribute('material', 'transparent', 'false');
+        labelEl.setAttribute('material', 'alphaTest', '0.5');
         this.el.appendChild(labelEl);
       }
       else if(el.getAttribute('type') == 1){
