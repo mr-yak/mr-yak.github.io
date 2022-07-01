@@ -14,14 +14,14 @@ AFRAME.registerComponent('button', {
           radius: 0.04,
           height: 0.02
         });
-        labelEl.setAttribute('position', '0 0.011 0');
+        labelEl.setAttribute('position', '0 0.011 0.01');
         if(el.getAttribute('type')==0){
           labelEl.setAttribute('rotation', '-90 0 0');
         }
         else{
           labelEl.setAttribute('rotation', '-90 180 0');
         }
-        labelEl.setAttribute('geometry', "primitive: plane; height: 0.08; width: 0.08;")
+        labelEl.setAttribute('geometry', "primitive: plane; height: 0.07; width: 0.07;")
         labelEl.setAttribute('material', 'src', 'assets/misc/arrow.png');
         labelEl.setAttribute('material', 'transparent', 'false');
         labelEl.setAttribute('material', 'alphaTest', '0.5');
