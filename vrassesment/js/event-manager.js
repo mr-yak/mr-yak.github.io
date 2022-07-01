@@ -5,6 +5,10 @@ AFRAME.registerComponent('event-manager', {
       this.picCount = 7;
       this.bindMethods();
 
+      var infoTXT = document.getElementById("infoContent");
+      var zoneTXT = document.getElementById("zoneContent");
+      var spotTXT = document.getElementById("spotContent");
+
       this.screenEl = document.querySelector('#photoPlane');
       this.nextButtonEl = document.querySelector('#nextButton');
       this.enterButtonEl = document.querySelector('#enterButton');
@@ -75,9 +79,7 @@ AFRAME.registerComponent('event-manager', {
   
     onClick: function (evt) { //Button Click handler
       var targetEl = evt.target;
-      var infoTXT = document.getElementById("infoContent");
-      var zoneTXT = document.getElementById("zoneContent");
-      var spotTXT = document.getElementById("spotContent");
+
         if(targetEl==this.nextButtonEl){
             this.picID += 1;
         }
@@ -96,10 +98,11 @@ AFRAME.registerComponent('event-manager', {
 
         }
         //change Picture
-        this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
-        infoTXT.setAttribute('value', this.infoMap[this.picId]);
-        zoneTXT.setAttribute('value', this.areaMap[this.picId]);
-        spotTXT.setAttribute('value', this.titleMap[this.picId]);
+      this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
+      //change txt
+      this.infoTXT.setAttribute('value', this.infoMap[this.picId]);
+      this.zoneTXT.setAttribute('value', this.areaMap[this.picId]);
+      this.spotTXT.setAttribute('value', this.titleMap[this.picId]);
     }
   });
 
