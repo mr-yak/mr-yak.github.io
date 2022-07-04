@@ -71,16 +71,6 @@ AFRAME.registerComponent('event-manager', {
         6: "Lucas creek is a creek that runs through kristin school. Each year the Year 9 kristin students are tasked with creating a project to improve the area. These range from signs, to bench seats, and have made Lucas creek a really nice place."
       };
 
-      /*this.infoPosMap = {
-        0: "",
-        1: "",
-        2: "",
-        3: "",
-        4: "",
-        5: "",
-        6: ""
-      };*/
-
       this.areaMap = {
         0: "Kristin Forest",
         1: "Kristin Forest",
@@ -100,14 +90,15 @@ AFRAME.registerComponent('event-manager', {
         5: "-0.75 1.4 0",
         6: "-0.75 1.4 0"
       };
-
+      //init screen texture
       this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
+      //init text values
       infoTXT.setAttribute('value', this.infoMap[this.picId]);
       zoneTXT.setAttribute('value', this.areaMap[this.picId]);
       spotTXT.setAttribute('value', this.titleMap[this.picId]);
-      /*this.infoTXT.setAttribute('position', this.infoPosMap[this.picId]);
+      //init text positions
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
-      this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);*/
+      this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
     },
     
   
@@ -147,9 +138,8 @@ AFRAME.registerComponent('event-manager', {
       this.zoneTXT.setAttribute('value', this.areaMap[this.picId]);
       this.spotTXT.setAttribute('value', this.titleMap[this.picId]);
       //align text
-      /*this.infoTXT.setAttribute('position', this.infoPosMap[this.picId]);
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
-      this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);*/
+      this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
     }
   });
 
