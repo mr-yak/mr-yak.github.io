@@ -97,8 +97,8 @@ AFRAME.registerComponent('event-manager', {
       zoneTXT.setAttribute('value', this.areaMap[this.picId]);
       spotTXT.setAttribute('value', this.titleMap[this.picId]);
       //init text positions
-      this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
-      this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
+      zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
+      spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
     },
     
   
