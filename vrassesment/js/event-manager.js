@@ -97,9 +97,9 @@ AFRAME.registerComponent('event-manager', {
       };
 
       this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
-      this.infoTXT.setAttribute('value', this.infoMap[this.picId]);
-      this.zoneTXT.setAttribute('value', this.areaMap[this.picId]);
-      this.spotTXT.setAttribute('value', this.titleMap[this.picId]);
+      infoTXT.setAttribute('value', this.infoMap[this.picId]);
+      zoneTXT.setAttribute('value', this.areaMap[this.picId]);
+      spotTXT.setAttribute('value', this.titleMap[this.picId]);
       /*this.infoTXT.setAttribute('position', this.infoPosMap[this.picId]);
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);*/
