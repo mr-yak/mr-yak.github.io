@@ -46,8 +46,27 @@ AFRAME.registerComponent('event-manager', {
         5: "The Woods",
         6: "The Seat"
       };
+      this.titlePosMap = {
+        0: "0 0 0",
+        1: "0 0 0",
+        2: "0 0 0",
+        3: "0 0 0",
+        4: "0 0 0",
+        5: "0 0 0",
+        6: "0 0 0"
+      };
 
       this.infoMap = {
+        0: "",
+        1: "",
+        2: "",
+        3: "",
+        4: "",
+        5: "",
+        6: ""
+      };
+
+      this.infoPosMap = {
         0: "",
         1: "",
         2: "",
@@ -66,10 +85,24 @@ AFRAME.registerComponent('event-manager', {
         5: "Lucas Creek",
         6: "Lucas Creek"
       };
+
+      this.areaPosMap = {
+        0: "",
+        1: "",
+        2: "",
+        3: "",
+        4: "",
+        5: "",
+        6: ""
+      };
+
       this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
-      infoTXT.setAttribute('value', this.infoMap[this.picId]);
-      zoneTXT.setAttribute('value', this.areaMap[this.picId]);
-      spotTXT.setAttribute('value', this.titleMap[this.picId]);
+      this.infoTXT.setAttribute('value', this.infoMap[this.picId]);
+      this.zoneTXT.setAttribute('value', this.areaMap[this.picId]);
+      this.spotTXT.setAttribute('value', this.titleMap[this.picId]);
+      /*this.infoTXT.setAttribute('position', this.infoPosMap[this.picId]);
+      this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
+      this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);*/
     },
     
   
@@ -103,6 +136,9 @@ AFRAME.registerComponent('event-manager', {
       this.infoTXT.setAttribute('value', this.infoMap[this.picId]);
       this.zoneTXT.setAttribute('value', this.areaMap[this.picId]);
       this.spotTXT.setAttribute('value', this.titleMap[this.picId]);
+      /*this.infoTXT.setAttribute('position', this.infoPosMap[this.picId]);
+      this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
+      this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);*/
     }
   });
 
