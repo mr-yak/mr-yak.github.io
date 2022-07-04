@@ -107,35 +107,41 @@ AFRAME.registerComponent('event-manager', {
     
   
     bindMethods: function () {
+      //onclick handler boilerplate
       this.onClick = this.onClick.bind(this);
     },
   
     onClick: function (evt) { //Button Click handler
       var targetEl = evt.target;
-
+        //change picture id so that it scrolls
         if(targetEl==this.nextButtonEl){
             this.picID += 1;
         }
         if(targetEl==this.backButtonEl){
             this.picID -= 1;
         }
+
+        // check if the image is out of bounds and wrap around to the first/last image
         if(this.picId==-1){
             this.picId=this.picCount-1;
         }
         else if (this.picId==this.picCount){
             this.picId=0;
         }
+
+        //if button is the enter button send the user to the required page
         if(targetEl==this.enterButtonEl){
             window.location.href = this.linkMap[this.picId];
             targetEl.addState('pressed');
-
         }
-        //change Picture
+      
+      //change Picture
       this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
       //change txt
       this.infoTXT.setAttribute('value', this.infoMap[this.picId]);
       this.zoneTXT.setAttribute('value', this.areaMap[this.picId]);
       this.spotTXT.setAttribute('value', this.titleMap[this.picId]);
+      //align text'
       /*this.infoTXT.setAttribute('position', this.infoPosMap[this.picId]);
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);*/
