@@ -58,7 +58,7 @@ AFRAME.registerComponent('event-manager', {
         3: "-0.52 -0.6 0",
         4: "-0.52 -0.6 0",
         5: "-0.54 -0.6 0",
-        6: "0 -0.6 0"
+        6: "-0.55 -0.6 0"
       };
 
       this.infoMap = {
