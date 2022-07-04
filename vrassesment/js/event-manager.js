@@ -2,7 +2,7 @@ AFRAME.registerComponent('event-manager', {
 
     init: function () {
       //init pic id and pic count
-      this.picId = 1;
+      this.picId = 2;
       this.picCount = 7;
       //event handler boilerplate
       this.bindMethods();
@@ -53,12 +53,12 @@ AFRAME.registerComponent('event-manager', {
       };
       this.titlePosMap = {
         0: "-0.6 -0.6 0",
-        1: "0 0 0",
-        2: "0 0 0",
-        3: "0 0 0",
-        4: "0 0 0",
-        5: "0 0 0",
-        6: "0 0 0"
+        1: "-0.65 -0.6 0",
+        2: "0 -0.6 0",
+        3: "0 -0.6 0",
+        4: "0 -0.6 0",
+        5: "0 -0.6 0",
+        6: "0 -0.6 0"
       };
 
       this.infoMap = {
