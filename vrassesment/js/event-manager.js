@@ -2,7 +2,7 @@ AFRAME.registerComponent('event-manager', {
 
     init: function () {
       //init pic id and pic count
-      this.picId = 6;
+      this.picId = 0;
       this.picCount = 7;
       //event handler boilerplate
       this.bindMethods();
@@ -71,7 +71,7 @@ AFRAME.registerComponent('event-manager', {
         6: "Lucas creek is a creek that runs through kristin school. Each year the Year 9 kristin students are tasked with creating a project to improve the area. These range from signs, to bench seats, and have made Lucas creek a really nice place."
       };
 
-      this.infoPosMap = {
+      /*this.infoPosMap = {
         0: "",
         1: "",
         2: "",
@@ -79,7 +79,7 @@ AFRAME.registerComponent('event-manager', {
         4: "",
         5: "",
         6: ""
-      };
+      };*/
 
       this.areaMap = {
         0: "Kristin Forest",
