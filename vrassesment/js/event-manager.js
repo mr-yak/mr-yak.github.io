@@ -1,23 +1,28 @@
 AFRAME.registerComponent('event-manager', {
 
     init: function () {
-      this.picId = 0;
+      //init pic id and pic count
+      this.picId = 1;
       this.picCount = 7;
+      //event handler boilerplate
       this.bindMethods();
 
+      //get the text elements
       var infoTXT = document.getElementById("infoContent");
       var zoneTXT = document.getElementById("zoneContent");
       var spotTXT = document.getElementById("spotContent");
-
+      //get the screen element
       this.screenEl = document.querySelector('#photoPlane');
+      //get the button elements
       this.nextButtonEl = document.querySelector('#nextButton');
       this.enterButtonEl = document.querySelector('#enterButton');
       this.backButtonEl = document.querySelector('#backButton');
-  
+      //add event listners to the buttons
       this.nextButtonEl.addEventListener('click', this.onClick);
       this.enterButtonEl.addEventListener('click', this.onClick);
       this.backButtonEl.addEventListener('click', this.onClick);
 
+      //----LOOKUP TABLES FOR SCROLLING----//
       this.linkMap = {
         0: "galleryhtml/container.html",
         1: "galleryhtml/forest.html",
@@ -47,7 +52,7 @@ AFRAME.registerComponent('event-manager', {
         6: "The Seat"
       };
       this.titlePosMap = {
-        0: "0 0 0",
+        0: "-0.6 -0.6 0",
         1: "0 0 0",
         2: "0 0 0",
         3: "0 0 0",
@@ -85,12 +90,12 @@ AFRAME.registerComponent('event-manager', {
         5: "Lucas Creek",
         6: "Lucas Creek"
       };
-
+      
       this.areaPosMap = {
-        0: "",
-        1: "",
-        2: "",
-        3: "",
+        0: "-0.8 1.4 0",
+        1: "-0.8 1.4 0",
+        2: "-0.8 1.4 0",
+        3: "-0.8 1.4 0",
         4: "",
         5: "",
         6: ""
@@ -141,7 +146,7 @@ AFRAME.registerComponent('event-manager', {
       this.infoTXT.setAttribute('value', this.infoMap[this.picId]);
       this.zoneTXT.setAttribute('value', this.areaMap[this.picId]);
       this.spotTXT.setAttribute('value', this.titleMap[this.picId]);
-      //align text'
+      //align text
       /*this.infoTXT.setAttribute('position', this.infoPosMap[this.picId]);
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);*/
