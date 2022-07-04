@@ -2,7 +2,7 @@ AFRAME.registerComponent('event-manager', {
 
     init: function () {
       //init pic id and pic count
-      this.picId = 3;
+      this.picId = 4;
       this.picCount = 7;
       //event handler boilerplate
       this.bindMethods();
@@ -55,7 +55,7 @@ AFRAME.registerComponent('event-manager', {
         0: "-0.6 -0.6 0",
         1: "-0.65 -0.6 0",
         2: "-0.7 -0.6 0",
-        3: "0 -0.6 0",
+        3: "-0.52 -0.6 0",
         4: "0 -0.6 0",
         5: "0 -0.6 0",
         6: "0 -0.6 0"
