@@ -2,7 +2,7 @@ AFRAME.registerComponent('event-manager', {
 
     init: function () {
       //init pic id and pic count
-      this.picId = 5;
+      this.picId = 6;
       this.picCount = 7;
       //event handler boilerplate
       this.bindMethods();
@@ -56,19 +56,19 @@ AFRAME.registerComponent('event-manager', {
         1: "-0.65 -0.6 0",
         2: "-0.7 -0.6 0",
         3: "-0.52 -0.6 0",
-        4: "0.52 -0.6 0",
-        5: "0 -0.6 0",
+        4: "-0.52 -0.6 0",
+        5: "-0.54 -0.6 0",
         6: "0 -0.6 0"
       };
 
       this.infoMap = {
-        0: "",
-        1: "",
-        2: "",
-        3: "",
-        4: "",
-        5: "",
-        6: ""
+        0: "Kristin forest is located on a small track through the back areas of the Kristin campus. This forest is used by the school for cross country, outdoor education and other educational purpouses. ",
+        1: "Kristin forest is located on a small track through the back areas of the Kristin campus. This forest is used by the school for cross country, outdoor education and other educational purpouses. ",
+        2: "Kristin forest is located on a small track through the back areas of the Kristin campus. This forest is used by the school for cross country, outdoor education and other educational purpouses. ",
+        3: "Kristin forest is located on a small track through the back areas of the Kristin campus. This forest is used by the school for cross country, outdoor education and other educational purpouses. ",
+        4: "Lucas creek is a creek that runs through kristin school. Each year the Year 9 kristin students are tasked with creating a project to improve the area. These range from signs, to bench seats, and have made Lucas creek a really nice place.",
+        5: "Lucas creek is a creek that runs through kristin school. Each year the Year 9 kristin students are tasked with creating a project to improve the area. These range from signs, to bench seats, and have made Lucas creek a really nice place.",
+        6: "Lucas creek is a creek that runs through kristin school. Each year the Year 9 kristin students are tasked with creating a project to improve the area. These range from signs, to bench seats, and have made Lucas creek a really nice place."
       };
 
       this.infoPosMap = {
