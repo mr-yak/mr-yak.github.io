@@ -2,7 +2,7 @@ AFRAME.registerComponent('event-manager', {
 
     init: function () {
       //init pic id and pic count
-      this.picId = 4;
+      this.picId = 5;
       this.picCount = 7;
       //event handler boilerplate
       this.bindMethods();
@@ -56,7 +56,7 @@ AFRAME.registerComponent('event-manager', {
         1: "-0.65 -0.6 0",
         2: "-0.7 -0.6 0",
         3: "-0.52 -0.6 0",
-        4: "0 -0.6 0",
+        4: "0.52 -0.6 0",
         5: "0 -0.6 0",
         6: "0 -0.6 0"
       };
@@ -96,9 +96,9 @@ AFRAME.registerComponent('event-manager', {
         1: "-0.8 1.4 0",
         2: "-0.8 1.4 0",
         3: "-0.8 1.4 0",
-        4: "",
-        5: "",
-        6: ""
+        4: "-0.75 1.4 0",
+        5: "-0.75 1.4 0",
+        6: "-0.75 1.4 0"
       };
 
       this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);

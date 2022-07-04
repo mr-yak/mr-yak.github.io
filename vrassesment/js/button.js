@@ -4,18 +4,23 @@ AFRAME.registerComponent('button', {
       width: {default: 0.11},
       toggable: {default: false}
     },
+
     init: function () {
+      //get the button element
       var el = this.el;
+      //create label element
       var labelEl = this.labelEl = document.createElement('a-entity');
+      //check if the button is a direction button
       if(el.getAttribute('type') == 0 || el.getAttribute('type') == 2){
+        //set colour to green
         this.color = '#00ff00';
+        //make the button a cylinder
         el.setAttribute('geometry', {
           primitive: 'cylinder',
           radius: 0.04,
           height: 0.02
         });
-        labelEl.setAttribute('position', '-0.01 0.012 -0.01');
-
+        //check if the button is the forward or back button, then position/flip the labal accordingly
         if(el.getAttribute('type')==0){
           labelEl.setAttribute('rotation', '-90 0 0');
           labelEl.setAttribute('position', '0.004 0.012 0');
@@ -24,30 +29,42 @@ AFRAME.registerComponent('button', {
           labelEl.setAttribute('rotation', '-90 180 0');
           labelEl.setAttribute('position', '-0.006 0.012 0');
         }
-
+        //give the label a geometry we can write a texture too
         labelEl.setAttribute('geometry', "primitive: plane; height: 0.07; width: 0.07;")
+        //apply texture
         labelEl.setAttribute('material', 'src', 'assets/misc/arrow.png');
+        //workaround to allow png transparancy
         labelEl.setAttribute('material', 'transparent', 'false');
         labelEl.setAttribute('material', 'alphaTest', '0.5');
+        //add the label as a child of the button
         this.el.appendChild(labelEl);
       }
+      //if the button is the launch button
       else if(el.getAttribute('type') == 1){
+          //make button red
           this.color = '#ff0000';
+          //make the button a slightly taller cylender
           el.setAttribute('geometry', {
             primitive: 'cylinder',
             radius: 0.08,
             height: 0.04
           });
+          //position the label
           labelEl.setAttribute('position', '0 0.02 0');
+          //rotate the label
           labelEl.setAttribute('rotation', '-90 0 0');
+          //add the text to the label
           labelEl.setAttribute('text', {
             value: this.data.label,
             color: 'white',
             align: 'center'
           });
+          // add the label as the child of the button
           this.el.appendChild(labelEl);
       }
+      // actually set the material of the button to the colour we set earlier
       el.setAttribute('material', {color: this.color});
+      //event handler stuff 
       el.setAttribute('pressable', '');
       this.bindMethods();
       this.el.addEventListener('stateadded', this.stateChanged);
@@ -57,26 +74,33 @@ AFRAME.registerComponent('button', {
     },
   
     bindMethods: function () {
+      //event handler boilerplate
       this.stateChanged = this.stateChanged.bind(this);
       this.onPressedStarted = this.onPressedStarted.bind(this);
       this.onPressedEnded = this.onPressedEnded.bind(this);
     },
   
-    update: function (oldData) {
+    /*update: function (oldData) {
       if (oldData.label !== this.data.label) {
         //this.labelEl.setAttribute('text', 'value', this.data.label);
       }
-    },
+    },*/
   
     stateChanged: function () {
-      var color = this.el.is('pressed') ? 'green' : this.color;
+      //set colour to blue if pressed, or default colour if not pressed
+      var color = this.el.is('pressed') ? 'blue' : this.color;
+      //set the material colour to color
       this.el.setAttribute('material', {color: color});
     },
-  
+  //
     onPressedStarted: function () {
+      //get element of button
       var el = this.el;
-      el.setAttribute('material', {color: 'green'});
+      //set colour to blue as it is being pressed
+      el.setAttribute('material', {color: 'blue'});
+      //send click signal
       el.emit('click');
+      //handle states
       if (this.data.togabble) {
         if (el.is('pressed')) {
           el.removeState('pressed');
@@ -87,7 +111,9 @@ AFRAME.registerComponent('button', {
     },
   
     onPressedEnded: function () {
+      //check if el is pressed
       if (this.el.is('pressed')) { return; }
+      //set colour if not pressed
         this.el.setAttribute('material', {color: this.color});
     }
   });
