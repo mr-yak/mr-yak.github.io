@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--AFRAME SCRIPT-->
         <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <!--MY SCRIPTS-->
         <script src="js/button.js"></script>
         <script src="js/event-manager.js"></script>
+        <link rel="icon" type="image/jpg" href="assets/favicon.jpg">
     </head>
     <body>
-        <a-scene background="color:#333333;">
+
+        <a-scene>
+          <!--Background-->
           <a-sky src="assets/misc/stars.jpg" rotation="0 0 0"></a-sky> 
+            <!--camera -->
             <a-camera wasd-controls-enabled="true"></a-camera>
+            <!--Screen-->
             <a-entity
               id="photoPlane"
               position="0 2.0 -1"
@@ -17,8 +24,9 @@
               material=""
             ></a-entity>
             <!--ADD FAVICONS-->
-            <!--ADD INFO PANES WITH TXT AS CHILDEREN-->
+            <!--Zone and spot Screen-->
             <a-plane position="-6 2 -1" rotation="0 70 0" width="4" height="5" material="color: #606060; opacity: 0.5;">
+              <!--Zone Title-->
               <a-text 
               font="kelsonsans" 
               value="Zone:" 
@@ -26,6 +34,7 @@
               position="-0.5 2 0"
               rotation="0 0 0">
               </a-text>
+              <!--Zone Content-->
               <a-text 
               id = "zoneContent"
               font="kelsonsans" 
@@ -34,6 +43,7 @@
               position="-0.6 1.4 0"
               rotation="0 0 0">
               </a-text>
+              <!--Spot Title-->
               <a-text 
               font="kelsonsans" 
               value="Landing Spot:" 
@@ -41,6 +51,7 @@
               position="-1.1 0 0"
               rotation="0 0 0">
               </a-text>
+              <!--Spot Content-->
               <a-text 
               id= "spotContent"
               font="kelsonsans" 
@@ -50,7 +61,9 @@
               rotation="0 0 0">
               </a-text>
             </a-plane>
+            <!--Info Screen-->
             <a-plane position="6 2 -1" rotation="0 290 0" width="4" height="5" material="color: #606060; opacity: 0.5;">
+              <!--Info Title-->
               <a-text 
               font="kelsonsans" 
               value="Info:" 
@@ -58,6 +71,7 @@
               position="-0.4 2 0"
               rotation="0 0 0">
               </a-text>
+              <!--Info Content-->
               <a-text
               id = "infoContent" 
               font="kelsonsans" 
@@ -68,18 +82,21 @@
               rotation="0 0 0">
               </a-text>
             </a-plane>
+            <!--Floor-->
             <a-cylinder id="ground" position="0 -1 0", radius="6" height="0.01" color="#303030"></a-cylinder>
-            <!--REDO NAV CHART WITH MORE DESCRIPTIVE PAGE NAMES-->
+            <!--Menu Container-->
             <a-entity id="menu" menu position="0 1.5 -0.5" rotation="-45 0 0" event-manager>
-              <a-entity geometry="primitive:box; width:0.6; height:0.4; depth:0.01" material="color:gray;" position="0 0 -0.025"></a-entity>
+              <!--Control Panel Geometry-->
+              <a-entity geometry="primitive:box; width:0.6; height:0.4; depth:0.03" material="color:gray;" position="0 0 -0.025"></a-entity>
+              <!--Buttons-->
               <a-entity id="nextButton" button="label: Next" type="2" position="-0.2 0 0" rotation="90 0 0"></a-entity>
               <a-entity id="enterButton" button="label: Launch!" type="1" position="0 0 0" rotation="90 0 0"></a-entity>
               <a-entity id="backButton" button="label: Back" type="0" position="0.2 0 0" rotation="90 0 0"></a-entity>
             </a-entity>
+            <!--Hand-->
             <a-entity hand-tracking-controls="hand: right"></a-entity>
           </a-scene>
         </body>
       </html>
-    
     </body>
 </html>
