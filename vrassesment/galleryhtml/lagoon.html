@@ -3,16 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <meta name="Author" content="Jack Shaw">
+        <!--Aframe-->
         <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+        <!--My Code-->
         <script src="../js/highlight.js"></script>
     </head>
     <body>
         <a-scene
         cursor="rayOrigin: mouse;" raycaster="objects: .raycastable">
+        <!--Camera-->
         <a-camera wasd-controls-enabled="false"></a-camera>
-
-        
+            <!--360IMG-->
             <a-sky src="../assets/vr/lagoon.JPG" rotation="0 0 0"></a-sky>
+            <!--Label-->
             <a-text 
                     font="kelsonsans" 
                     value="The Lagoon" 
@@ -20,6 +23,7 @@
                     position="2.5 0.25 1.5"
                     rotation="0 0 0">
             </a-text>
+            <!--Button Mixin-->
             <a-mixin
             id="frame"
             geometry="primitive: plane; width: 0.5; height: 0.5"
@@ -28,8 +32,10 @@
             animation__scale_reverse="property: scale; to: 1 1 1; dur: 200; startEvents: mouseleave"
             ></a-mixin>
 
+            <!--Laser-->
             <a-entity id="rightHand" laser-controls="hand: right" raycaster="objects: .raycastable" line="color: #118A7E"></a-entity>
 
+            <!--Button-->
             <a-entity id="ui" position="0 1.6 2.5">
                 <a-entity id="menu" highlight>
                     <a-entity id="home" position="0 0 0" mixin="frame" class="raycastable menu-button">
