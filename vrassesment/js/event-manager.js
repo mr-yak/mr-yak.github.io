@@ -110,6 +110,7 @@ AFRAME.registerComponent('event-manager', {
   
     onClick: function (evt) { //Button Click handler
       var targetEl = evt.target;
+      targetEl.addState('pressed');
         //change picture id so that it scrolls
         if(targetEl==this.nextButtonEl){
             this.picID += 1;
@@ -129,8 +130,8 @@ AFRAME.registerComponent('event-manager', {
         //if button is the enter button send the user to the required page
         if(targetEl==this.enterButtonEl){
             window.location.href = this.linkMap[this.picId];
-            targetEl.addState('pressed');
         }
+        
       
       //change Picture
       this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
