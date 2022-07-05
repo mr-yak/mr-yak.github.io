@@ -21,8 +21,7 @@ AFRAME.registerComponent('event-manager', {
       this.nextButtonEl.addEventListener('click', this.onClick);
       this.enterButtonEl.addEventListener('click', this.onClick);
       this.backButtonEl.addEventListener('click', this.onClick);
-      console.log(this.picID)
-
+      
       //----LOOKUP TABLES FOR SCROLLING----//
       this.linkMap = {
         0: "galleryhtml/container.html",
@@ -101,7 +100,6 @@ AFRAME.registerComponent('event-manager', {
       //init text positions
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
-      console.log(this.picID)
     },
     
   
@@ -112,16 +110,15 @@ AFRAME.registerComponent('event-manager', {
   
     onClick: function (evt) { //Button Click handler
       var targetEl = evt.target;
-      console.log(this.picID)
+      console.log(this.picId)
       targetEl.addState('pressed');
         //change picture id so that it scrolls
         if(targetEl==this.nextButtonEl){
-            this.picID = this.picID + 1;
+            this.picId = this.picId + 1;
         }
         if(targetEl==this.backButtonEl){
-            this.picID = this.picID - 1;
+            this.picId = this.picId - 1;
         }
-        console.log(this.picID)
         // check if the image is out of bounds and wrap around to the first/last image
         if(this.picId== -1){
             this.picId = this.picCount-1;
