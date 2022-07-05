@@ -110,22 +110,20 @@ AFRAME.registerComponent('event-manager', {
   
     onClick: function (evt) { //Button Click handler
       var targetEl = evt.target;
-      console.log(this.nextButtonEl);
-      console.log(targetEl);
       targetEl.addState('pressed');
         //change picture id so that it scrolls
         if(targetEl==this.nextButtonEl){
-            this.picID += 1;
+            this.picID = this.picID+1;
         }
         if(targetEl==this.backButtonEl){
-            this.picID -= 1;
+            this.picID = this.picID-1;
         }
 
         // check if the image is out of bounds and wrap around to the first/last image
-        if(this.picId==-1){
+        if(this.picId== -1){
             this.picId=this.picCount-1;
         }
-        else if (this.picId==this.picCount){
+        else if (this.picId == this.picCount){
             this.picId=0;
         }
 
@@ -144,6 +142,7 @@ AFRAME.registerComponent('event-manager', {
       //align text
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
+      targetEl.removeState('pressed');
     }
   });
 
