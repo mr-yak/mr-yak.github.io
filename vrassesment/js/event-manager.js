@@ -115,9 +115,11 @@ AFRAME.registerComponent('event-manager', {
         //change picture id so that it scrolls
         if(targetEl==this.nextButtonEl){
             this.picID = this.picID + 1;
+            console.log("boop")
         }
         if(targetEl==this.backButtonEl){
             this.picID = this.picID - 1;
+            console.log("boop")
         }
 
         // check if the image is out of bounds and wrap around to the first/last image
