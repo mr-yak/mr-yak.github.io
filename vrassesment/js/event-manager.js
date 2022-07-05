@@ -7,7 +7,6 @@ AFRAME.registerComponent('event-manager', {
       //event handler boilerplate
       this.bindMethods();
 
-      
       //get the text elements
       var infoTXT = document.getElementById("infoContent");
       var zoneTXT = document.getElementById("zoneContent");
