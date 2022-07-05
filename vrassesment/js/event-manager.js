@@ -7,6 +7,7 @@ AFRAME.registerComponent('event-manager', {
       //event handler boilerplate
       this.bindMethods();
 
+      
       //get the text elements
       var infoTXT = document.getElementById("infoContent");
       var zoneTXT = document.getElementById("zoneContent");
@@ -14,9 +15,9 @@ AFRAME.registerComponent('event-manager', {
       //get the screen element
       this.screenEl = document.querySelector('#photoPlane');
       //get the button elements
-      this.nextButtonEl = document.querySelector('#nextButton');
-      this.enterButtonEl = document.querySelector('#enterButton');
-      this.backButtonEl = document.querySelector('#backButton');
+      this.nextButtonEl = document.getElementById('nextButton');
+      this.enterButtonEl = document.getElementById('enterButton');
+      this.backButtonEl = document.getElementById('backButton');
       //add event listners to the buttons
       this.nextButtonEl.addEventListener('click', this.onClick);
       this.enterButtonEl.addEventListener('click', this.onClick);
@@ -109,6 +110,7 @@ AFRAME.registerComponent('event-manager', {
     },
   
     onClick: function (evt) { //Button Click handler
+      console.log(evt)
       var targetEl = evt.target;
       targetEl.addState('pressed');
         //change picture id so that it scrolls
