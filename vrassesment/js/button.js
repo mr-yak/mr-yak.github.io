@@ -116,14 +116,6 @@ AFRAME.registerComponent('button', {
       el.setAttribute('material', {color: 'blue'});
       //send click signal
       el.emit('click');
-      //handle states
-      /*if (this.data.togabble) {
-        if (el.is('pressed')) {
-          el.removeState('pressed');
-        } else {
-          el.addState('pressed');
-        }
-      }*/
     },
   
     onPressedEnded: function () {

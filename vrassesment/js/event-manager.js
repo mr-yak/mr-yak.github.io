@@ -145,10 +145,9 @@ AFRAME.registerComponent('event-manager', {
       //align text
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
-      setTimeout(depress, 1000, targetEl)
-    },
-    depress: function (target) {
-      target.removeState('pressed');
+      setTimeout(() => {
+        targetEl.removeState('pressed');
+      }, 4000)
     }
   });
 
