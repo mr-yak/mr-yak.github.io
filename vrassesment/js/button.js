@@ -80,11 +80,11 @@ AFRAME.registerComponent('button', {
       this.onPressedEnded = this.onPressedEnded.bind(this);
     },
   
-    update: function (oldData) {
+    /*update: function (oldData) {
       if (oldData.label !== this.data.label) {
         //this.labelEl.setAttribute('text', 'value', this.data.label);
       }
-    },
+    },*/
   
     stateChanged: function () {
       //set colour to blue if pressed, or default colour if not pressed
@@ -122,13 +122,13 @@ AFRAME.registerComponent('button', {
       //send click signal
       el.emit('click');
       //handle states
-      if (this.data.togabble) {
+      /*if (this.data.togabble) {
         if (el.is('pressed')) {
           el.removeState('pressed');
         } else {
           el.addState('pressed');
         }
-      }
+      }*/
     },
   
     onPressedEnded: function () {
