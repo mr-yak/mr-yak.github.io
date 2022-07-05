@@ -91,6 +91,27 @@ AFRAME.registerComponent('button', {
       var color = this.el.is('pressed') ? 'blue' : this.color;
       //set the material colour to color
       this.el.setAttribute('material', {color: color});
+      //check if button is shord
+      if (el.getAttribute('type') == 0 || el.getAttribute('type') == 2){
+        //check if button is pressed
+        if(this.el.is('pressed')){
+          //press button
+          this.el.setAttribute('geometry', 'height', 0.01);
+        }
+        else{
+          //else unpress button
+          this.el.setAttribute('geometry', 'height', 0.02);
+        }
+      }
+      else{
+        //do the same for the taller button
+        if(this.el.is('pressed')){
+          this.el.setAttribute('geometry', 'height', 0.02);
+        }
+        else{
+          this.el.setAttribute('geometry', 'height', 0.04);
+        }
+      }
     },
   //
     onPressedStarted: function () {
