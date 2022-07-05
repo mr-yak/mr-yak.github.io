@@ -15,7 +15,7 @@
     </head>
     <body>
 
-        <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .raycastable">
+        <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .raycastable" stats>
           <!--Background-->
           <a-sky src="assets/misc/stars.jpg" rotation="0 0 0"></a-sky> 
             <!--camera -->
@@ -29,7 +29,7 @@
               material=""
             ></a-entity>
             <!--Zone and spot Screen-->
-            <a-plane position="-6 2 -1" rotation="0 70 0" width="4" height="5" material="color: #606060; opacity: 0.5;">
+            <a-plane position="-4 2 -3" rotation="0 50 0" width="4" height="5" material="color: #606060; opacity: 0.5;">
               <!--Zone Title-->
               <a-text 
               font="kelsonsans" 
@@ -66,7 +66,7 @@
               </a-text>
             </a-plane>
             <!--Info Screen-->
-            <a-plane position="6 2 -1" rotation="0 290 0" width="4" height="5" material="color: #606060; opacity: 0.5;">
+            <a-plane position="4 2 -3" rotation="0 310 0" width="4" height="5" material="color: #606060; opacity: 0.5;">
               <!--Info Title-->
               <a-text 
               font="kelsonsans" 
