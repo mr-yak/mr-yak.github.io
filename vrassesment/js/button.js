@@ -79,7 +79,7 @@ AFRAME.registerComponent('button', {
       this.onPressedStarted = this.onPressedStarted.bind(this);
       this.onPressedEnded = this.onPressedEnded.bind(this);
     },
-  
+   
   
     stateChanged: function () {
       //set colour to blue if pressed, or default colour if not pressed
@@ -91,7 +91,7 @@ AFRAME.registerComponent('button', {
         //check if button is pressed
         if(this.el.is('pressed')){
           //press button
-          this.el.setAttribute('geometry', 'height', 0.01);
+          this.el.setAttribute('geometry', 'height', 0.005);
         }
         else{
           //else unpress button
@@ -101,7 +101,7 @@ AFRAME.registerComponent('button', {
       else{
         //do the same for the taller button
         if(this.el.is('pressed')){
-          this.el.setAttribute('geometry', 'height', 0.02);
+          this.el.setAttribute('geometry', 'height', 0.01);
         }
         else{
           this.el.setAttribute('geometry', 'height', 0.04);
