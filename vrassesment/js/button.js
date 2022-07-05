@@ -67,10 +67,10 @@ AFRAME.registerComponent('button', {
       //event handler stuff 
       el.setAttribute('pressable', '');
       this.bindMethods();
-      this.el.addEventListener('stateadded', this.stateChanged);
-      this.el.addEventListener('stateremoved', this.stateChanged);
-      this.el.addEventListener('pressedstarted', this.onPressedStarted);
-      this.el.addEventListener('pressedended', this.onPressedEnded);
+      el.addEventListener('stateadded', this.stateChanged);
+      el.addEventListener('stateremoved', this.stateChanged);
+      el.addEventListener('pressedstarted', this.onPressedStarted);
+      el.addEventListener('pressedended', this.onPressedEnded);
     },
   
     bindMethods: function () {
@@ -80,11 +80,11 @@ AFRAME.registerComponent('button', {
       this.onPressedEnded = this.onPressedEnded.bind(this);
     },
   
-    /*update: function (oldData) {
+    update: function (oldData) {
       if (oldData.label !== this.data.label) {
         //this.labelEl.setAttribute('text', 'value', this.data.label);
       }
-    },*/
+    },
   
     stateChanged: function () {
       //set colour to blue if pressed, or default colour if not pressed

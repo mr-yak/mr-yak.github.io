@@ -110,6 +110,8 @@ AFRAME.registerComponent('event-manager', {
   
     onClick: function (evt) { //Button Click handler
       var targetEl = evt.target;
+      console.log(this.nextButtonEl);
+      console.log(targetEl);
       targetEl.addState('pressed');
         //change picture id so that it scrolls
         if(targetEl==this.nextButtonEl){
