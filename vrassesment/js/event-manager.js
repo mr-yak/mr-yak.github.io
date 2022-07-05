@@ -21,6 +21,7 @@ AFRAME.registerComponent('event-manager', {
       this.nextButtonEl.addEventListener('click', this.onClick);
       this.enterButtonEl.addEventListener('click', this.onClick);
       this.backButtonEl.addEventListener('click', this.onClick);
+      console.log(this.picID)
 
       //----LOOKUP TABLES FOR SCROLLING----//
       this.linkMap = {
@@ -100,6 +101,7 @@ AFRAME.registerComponent('event-manager', {
       //init text positions
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
+      console.log(this.picID)
     },
     
   
@@ -110,6 +112,7 @@ AFRAME.registerComponent('event-manager', {
   
     onClick: function (evt) { //Button Click handler
       var targetEl = evt.target;
+      console.log(this.picID)
       targetEl.addState('pressed');
         //change picture id so that it scrolls
         if(targetEl==this.nextButtonEl){
