@@ -92,7 +92,7 @@ AFRAME.registerComponent('event-manager', {
       };
       //init screen texture
       this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
-      this.screenEl.setAttribute('material', 'value',  "double");
+      this.screenEl.setAttribute('material', 'side',  "double");
       //init text values
       infoTXT.setAttribute('value', this.infoMap[this.picId]);
       zoneTXT.setAttribute('value', this.areaMap[this.picId]);
