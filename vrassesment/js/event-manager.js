@@ -8,9 +8,9 @@ AFRAME.registerComponent('event-manager', {
       this.bindMethods();
 
       //get the text elements
-      var infoTXT = document.getElementById("infoContent");
-      var zoneTXT = document.getElementById("zoneContent");
-      var spotTXT = document.getElementById("spotContent");
+      this.infoTXT = document.getElementById("infoContent");
+      this.zoneTXT = document.getElementById("zoneContent");
+      this.spotTXT = document.getElementById("spotContent");
       //get the screen element
       this.screenEl = document.querySelector('#photoPlane');
       //get the button elements
@@ -94,12 +94,12 @@ AFRAME.registerComponent('event-manager', {
       this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
       this.screenEl.setAttribute('material', 'side',  "double");
       //init text values
-      infoTXT.setAttribute('value', this.infoMap[this.picId]);
-      zoneTXT.setAttribute('value', this.areaMap[this.picId]);
-      spotTXT.setAttribute('value', this.titleMap[this.picId]);
+      this.infoTXT.setAttribute('value', this.infoMap[this.picId]);
+      this.zoneTXT.setAttribute('value', this.areaMap[this.picId]);
+      this.spotTXT.setAttribute('value', this.titleMap[this.picId]);
       //init text positions
-      zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
-      spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
+      this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
+      this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
     },
     
   
