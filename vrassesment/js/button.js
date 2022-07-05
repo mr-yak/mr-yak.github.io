@@ -80,11 +80,6 @@ AFRAME.registerComponent('button', {
       this.onPressedEnded = this.onPressedEnded.bind(this);
     },
   
-    /*update: function (oldData) {
-      if (oldData.label !== this.data.label) {
-        //this.labelEl.setAttribute('text', 'value', this.data.label);
-      }
-    },*/
   
     stateChanged: function () {
       //set colour to blue if pressed, or default colour if not pressed
@@ -92,7 +87,7 @@ AFRAME.registerComponent('button', {
       //set the material colour to color
       this.el.setAttribute('material', {color: color});
       //check if button is shord
-      if (el.getAttribute('type') == 0 || el.getAttribute('type') == 2){
+      if (this.el.getAttribute('type') == 0 || this.el.getAttribute('type') == 2){
         //check if button is pressed
         if(this.el.is('pressed')){
           //press button
