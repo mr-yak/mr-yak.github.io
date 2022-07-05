@@ -113,15 +113,15 @@ AFRAME.registerComponent('event-manager', {
       targetEl.addState('pressed');
         //change picture id so that it scrolls
         if(targetEl==this.nextButtonEl){
-            this.picID = this.picID+1;
+            this.picID = this.picID + 1;
         }
         if(targetEl==this.backButtonEl){
-            this.picID = this.picID-1;
+            this.picID = this.picID - 1;
         }
 
         // check if the image is out of bounds and wrap around to the first/last image
         if(this.picId== -1){
-            this.picId=this.picCount-1;
+            this.picId = this.picCount-1;
         }
         else if (this.picId == this.picCount){
             this.picId=0;
