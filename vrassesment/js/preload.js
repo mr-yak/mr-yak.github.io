@@ -1,4 +1,5 @@
-//preload assets
+
+/*//preload assets
 var loadingScreen = document.getElementById("load_screen");
 var screenEl = document.querySelector('#photoPlane');
 var ctx = loadingScreen.getContext("2d");
@@ -47,4 +48,4 @@ setTimeout(() => {
 setTimeout(() => {
     loadingScreen.remove();
     console.log("gone")
-}, 8000)
+}, 8000)*/
