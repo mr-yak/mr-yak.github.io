@@ -19,11 +19,9 @@ var thumbnailMap = {
 
 setTimeout(() => {
     screenEl.setAttribute('material', 'src',  thumbnailMap[1]);
-    print("1")
 }, 1000)
 setTimeout(() => {
     screenEl.setAttribute('material', 'src',  thumbnailMap[2]);  
-    print("2") 
 }, 2000)
 
 setTimeout(() => {
@@ -48,5 +46,4 @@ setTimeout(() => {
 
 setTimeout(() => {
     loadingScreen.remove();
-    print("3")
 }, 8000)
