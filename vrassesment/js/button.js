@@ -92,7 +92,7 @@ AFRAME.registerComponent('button', {
         if(this.el.is('pressed')){
           //press button
           //this.el.setAttribute('geometry', 'height', 0.005);
-          this.el.object3D.geometry.height=0.005;
+          this.el.setAttribute('geometry', 'height', 0.005);
         }
         else{
           //else unpress button

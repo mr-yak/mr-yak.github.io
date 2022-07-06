@@ -46,4 +46,5 @@ setTimeout(() => {
 
 setTimeout(() => {
     loadingScreen.remove();
+    console.log("gone")
 }, 8000)
