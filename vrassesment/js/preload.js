@@ -1,5 +1,5 @@
 //preload assets
-var loadingScreen = document.getElementById('load_screen');
+var loadingScreen = document.getElementById("load_screen");
 var ctx = loadingScreen.getContext("2d");
 ctx.fillStyle = "#000000";
 ctx.fillRect(0, 0, 1920, 1080);
