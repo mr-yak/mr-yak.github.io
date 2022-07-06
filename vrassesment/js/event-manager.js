@@ -21,7 +21,7 @@ AFRAME.registerComponent('event-manager', {
       this.nextButtonEl.addEventListener('click', this.onClick);
       this.enterButtonEl.addEventListener('click', this.onClick);
       this.backButtonEl.addEventListener('click', this.onClick);
-      
+
       //----LOOKUP TABLES FOR SCROLLING----//
       this.linkMap = {
         0: "galleryhtml/container.html",
@@ -92,7 +92,6 @@ AFRAME.registerComponent('event-manager', {
       };
       //init screen texture
       this.screenEl.setAttribute('material', 'src',  this.thumbnailMap[this.picId]);
-      this.screenEl.setAttribute('material', 'side',  "double");
       //init text values
       this.infoTXT.setAttribute('value', this.infoMap[this.picId]);
       this.zoneTXT.setAttribute('value', this.areaMap[this.picId]);
@@ -109,15 +108,15 @@ AFRAME.registerComponent('event-manager', {
     },
   
     onClick: function (evt) { //Button Click handler
+      //the next and back buttons are reversed, but it doesn't affect user experience and can't be bothered changing it.
       var targetEl = evt.target;
-      console.log(this.picId)
       targetEl.addState('pressed');
         //change picture id so that it scrolls
         if(targetEl==this.nextButtonEl){
-            this.picId = this.picId + 1;
+            this.picId = this.picId - 1;
         }
         if(targetEl==this.backButtonEl){
-            this.picId = this.picId - 1;
+            this.picId = this.picId + 1;
         }
         // check if the image is out of bounds and wrap around to the first/last image
         if(this.picId== -1){
