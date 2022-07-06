@@ -17,16 +17,16 @@
 
         <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .raycastable" stats>
           <!--Background-->
-          <a-sky src="assets/misc/stars.jpg" rotation="0 0 0"></a-sky> 
+          <!--<a-sky src="assets/misc/stars.jpg" rotation="0 0 0"></a-sky>--> 
             <!--camera -->
-            <a-camera position="0 1.6 0.2"></a-camera>
+            <a-camera position="0 1.6 0.5"></a-camera>
             <!--Screen-->
             <a-entity
               id="photoPlane"
               position="0 2.0 -1"
               rotation="0 0 0"
               geometry="primitive: plane; height: 1; width: 1.78;"
-              material="flatShading: true; shader: flat;"
+              material="flatShading: true; shader: flat; npot:true;"
             ></a-entity>
             <!--Zone and spot Screen-->
             <a-plane position="-4 2 -3" rotation="0 50 0" width="4" height="5" material="color: #606060; opacity: 0.5;">
