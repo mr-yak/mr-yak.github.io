@@ -4,6 +4,7 @@ var ctx = loadingScreen.getContext("2d");
 ctx.fillStyle = "#000000";
 ctx.fillRect(0, 0, 1920, 1080);
 ctx.fillText("Loading...", 10, 50);
+//don't judge me it was really laggy without this
 
 var thumbnailMap = {
     0: "#container",

@@ -8,6 +8,7 @@
         <!--AFRAME SCRIPT-->
         <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
         <!--MY SCRIPTS-->
+        <script src="js/preload.js"></script>
         <script src="js/button.js"></script>
         <script src="js/event-manager.js"></script>
         <!--Favicon-->
@@ -29,7 +30,7 @@
           <!--Background-->
           <a-sky src="#night" rotation="0 0 0"></a-sky>
             <!--camera -->
-            <a-camera position="0 1.6 0.5"></a-camera>
+            <a-camera position="0 1.6 0.5" look-controls="true"></a-camera>
             <!--Screen-->
             <a-entity
               id="photoPlane"
