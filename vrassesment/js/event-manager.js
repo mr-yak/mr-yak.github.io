@@ -33,13 +33,13 @@ AFRAME.registerComponent('event-manager', {
         6: "galleryhtml/seat.html"
       };
       this.thumbnailMap = {
-        0: "assets/thumbnails/container_t.JPG",
-        1: "assets/thumbnails/forest_t.JPG",
-        2: "assets/thumbnails/lagoon_t.JPG",
-        3: "assets/thumbnails/river_t.JPG",
-        4: "assets/thumbnails/path_t.JPG",
-        5: "assets/thumbnails/woods_t.JPG",
-        6: "assets/thumbnails/seat_t.JPG"
+        0: "#container",
+        1: "#forest",
+        2: "#lagoon",
+        3: "#river",
+        4: "#path",
+        5: "#woods",
+        6: "#seat"
       };
 
       this.titleMap = {
