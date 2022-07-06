@@ -1,5 +1,6 @@
 //preload assets
 var loadingScreen = document.getElementById("load_screen");
+var screenEl = document.querySelector('#photoPlane');
 var ctx = loadingScreen.getContext("2d");
 ctx.fillStyle = "#000000";
 ctx.fillRect(0, 0, 1920, 1080);
@@ -18,9 +19,11 @@ var thumbnailMap = {
 
 setTimeout(() => {
     screenEl.setAttribute('material', 'src',  thumbnailMap[1]);
+    print("1")
 }, 1000)
 setTimeout(() => {
-    screenEl.setAttribute('material', 'src',  thumbnailMap[2]);   
+    screenEl.setAttribute('material', 'src',  thumbnailMap[2]);  
+    print("2") 
 }, 2000)
 
 setTimeout(() => {
@@ -45,4 +48,5 @@ setTimeout(() => {
 
 setTimeout(() => {
     loadingScreen.remove();
+    print("3")
 }, 8000)
