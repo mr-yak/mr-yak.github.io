@@ -108,7 +108,9 @@ AFRAME.registerComponent('event-manager', {
       //init text positions
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
-      console.log(this.scene.renderer);
+    },
+    
+    update: function (){
       this.scene.renderer.initTexture(this.container_tex);
       this.scene.renderer.initTexture(this.forest_tex);
       this.scene.renderer.initTexture(this.lagoon_tex);
@@ -117,7 +119,6 @@ AFRAME.registerComponent('event-manager', {
       this.scene.renderer.initTexture(this.woods_tex);
       this.scene.renderer.initTexture(this.seat_tex);
     },
-    
   
     bindMethods: function () {
       //onclick handling
