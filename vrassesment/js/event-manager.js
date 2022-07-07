@@ -44,11 +44,11 @@ AFRAME.registerComponent('event-manager', {
       this.thumbnailMap = {
         0: this.container_tex,
         1: this.forest_tex,
-        2: "#lagoon",
-        3: "#river",
-        4: "#path",
-        5: "#woods",
-        6: "#seat"
+        2: this.lagoon_tex,
+        3: this.river_tex,
+        4: this.path_tex,
+        5: this.woods_tex,
+        6: this.seat_tex
       };
 
       this.titleMap = {
@@ -120,7 +120,7 @@ AFRAME.registerComponent('event-manager', {
         this.scene.renderer.initTexture(this.path_tex);
         this.scene.renderer.initTexture(this.woods_tex);
         this.scene.renderer.initTexture(this.seat_tex);
-      }, 1000)
+      }, 100)
     },
   
     bindMethods: function () {
