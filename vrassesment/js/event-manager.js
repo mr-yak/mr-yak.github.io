@@ -111,13 +111,16 @@ AFRAME.registerComponent('event-manager', {
     },
     
     update: function (){
-      this.scene.renderer.initTexture(this.container_tex);
-      this.scene.renderer.initTexture(this.forest_tex);
-      this.scene.renderer.initTexture(this.lagoon_tex);
-      this.scene.renderer.initTexture(this.river_tex);
-      this.scene.renderer.initTexture(this.path_tex);
-      this.scene.renderer.initTexture(this.woods_tex);
-      this.scene.renderer.initTexture(this.seat_tex);
+      setTimeout(() => {
+        console.log(this.scene.renderer)
+        this.scene.renderer.initTexture(this.container_tex);
+        this.scene.renderer.initTexture(this.forest_tex);
+        this.scene.renderer.initTexture(this.lagoon_tex);
+        this.scene.renderer.initTexture(this.river_tex);
+        this.scene.renderer.initTexture(this.path_tex);
+        this.scene.renderer.initTexture(this.woods_tex);
+        this.scene.renderer.initTexture(this.seat_tex);
+      }, 1000)
     },
   
     bindMethods: function () {
