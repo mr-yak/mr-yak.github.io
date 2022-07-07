@@ -111,8 +111,8 @@ AFRAME.registerComponent('event-manager', {
     },
     
     update: function (){
+      //initiate all the textures, loading them into memory to reduce frame drops on first load on screen
       setTimeout(() => {
-        console.log(this.scene.renderer)
         this.scene.renderer.initTexture(this.container_tex);
         this.scene.renderer.initTexture(this.forest_tex);
         this.scene.renderer.initTexture(this.lagoon_tex);
