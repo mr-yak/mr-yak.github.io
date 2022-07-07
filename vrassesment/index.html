@@ -21,7 +21,9 @@
           <!--Background-->
           <a-sky src="#night" rotation="0 0 0"></a-sky>
             <!--camera -->
-            <a-camera position="0 1.6 0.5" look-controls="true"></a-camera>
+            <a-entity id="rig" position="0 1.6 0.5">
+              <a-entity camera="active:true" look-controls="true" wasd-controls></a-camera>
+            </a-entity>
             <!--Screen-->
             <a-entity
               id="photoPlane"
