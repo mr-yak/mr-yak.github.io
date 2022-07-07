@@ -8,9 +8,9 @@ AFRAME.registerComponent('event-manager', {
       this.path_tex= new THREE.TextureLoader().load("assets/thumbnails/path_t.JPG");
       this.woods_tex= new THREE.TextureLoader().load("assets/thumbnails/woods_t.JPG");
       this.seat_tex= new THREE.TextureLoader().load("assets/thumbnails/seat_t.JPG");
-      this.con_mat = new THREE.MeshBasicMaterial( {map: texture} );
+      this.con_mat = new THREE.MeshBasicMaterial( {map: this.container_tex} );
       console.log(this.con_mat)
-      this.for_mat = new THREE.MeshBasicMaterial( {map: texture} );
+      this.for_mat = new THREE.MeshBasicMaterial( {map: this.forest_tex} );
       console.log(this.for_mat)
       //scene element 
       this.scene = document.querySelector("a-scene");
