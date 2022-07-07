@@ -10,13 +10,6 @@ AFRAME.registerComponent('event-manager', {
       this.seat_tex= new THREE.TextureLoader().load("assets/thumbnails/seat_t.JPG");
       //scene element 
       this.scene = document.querySelector("a-scene");
-      this.scene.renderer.initTexture(this.container_tex);
-      this.scene.renderer.initTexture(this.forest_tex);
-      this.scene.renderer.initTexture(this.lagoon_tex);
-      this.scene.renderer.initTexture(this.river_tex);
-      this.scene.renderer.initTexture(this.path_tex);
-      this.scene.renderer.initTexture(this.woods_tex);
-      this.scene.renderer.initTexture(this.seat_tex);
       //init pic id and pic count
       this.picId = 0;
       this.picCount = 7;
@@ -115,6 +108,14 @@ AFRAME.registerComponent('event-manager', {
       //init text positions
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
+      print(this.scene.renderer);
+      this.scene.renderer.initTexture(this.container_tex);
+      this.scene.renderer.initTexture(this.forest_tex);
+      this.scene.renderer.initTexture(this.lagoon_tex);
+      this.scene.renderer.initTexture(this.river_tex);
+      this.scene.renderer.initTexture(this.path_tex);
+      this.scene.renderer.initTexture(this.woods_tex);
+      this.scene.renderer.initTexture(this.seat_tex);
     },
     
   
