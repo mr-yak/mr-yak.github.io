@@ -2,9 +2,14 @@ AFRAME.registerComponent('event-manager', {
 
     init: function () {
       //load all the textures, not using image paths for performance
-      this.container_tex= new THREE.TextureLoader().load("assets/thumbnails/container_t.JPG");
+      this.container_tex= new THREE.TextureLoader().load("assets/thumbnails/container_t.JPG", 	function ( texture ) {
+          this.con_mat = new THREE.MeshBasicMaterial( {
+          map: texture
+         } );
+      });
+      console.log(this.con_mat)
       this.forest_tex= new THREE.TextureLoader().load("assets/thumbnails/forest_t.JPG");
-      this.lagoon_tex= new THREE.TextureLoader().load("assets/thumbnails/lagoon_t.JPG");
+      this.lagoon_tex = new THREE.TextureLoader().load("assets/thumbnails/lagoon_t.JPG");
       this.river_tex= new THREE.TextureLoader().load("assets/thumbnails/river_t.JPG");
       this.path_tex= new THREE.TextureLoader().load("assets/thumbnails/path_t.JPG");
       this.woods_tex= new THREE.TextureLoader().load("assets/thumbnails/woods_t.JPG");
