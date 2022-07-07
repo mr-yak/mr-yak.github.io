@@ -4,9 +4,9 @@ AFRAME.registerComponent('event-manager', {
       this.for_mat
       //load all the textures, not using image paths for performance
       this.container_tex= new THREE.TextureLoader().load("assets/thumbnails/container_t.JPG", 	function ( texture ) {this.con_mat = new THREE.MeshBasicMaterial( {map: texture} );});
-      console.log(con_mat)
+      console.log(this.con_mat)
       this.forest_tex= new THREE.TextureLoader().load("assets/thumbnails/forest_t.JPG", 	function ( texture ) {this.for_mat = new THREE.MeshBasicMaterial( {map: texture} );});
-      console.log(for_mat)
+      console.log(this.for_mat)
       this.lagoon_tex = new THREE.TextureLoader().load("assets/thumbnails/lagoon_t.JPG");
       this.river_tex= new THREE.TextureLoader().load("assets/thumbnails/river_t.JPG");
       this.path_tex= new THREE.TextureLoader().load("assets/thumbnails/path_t.JPG");
@@ -48,8 +48,8 @@ AFRAME.registerComponent('event-manager', {
         6: "galleryhtml/seat.html"
       };
       this.thumbnailMap = {
-        0: this.container_tex,
-        1: this.forest_tex,
+        0: this.con_mat,
+        1: this.for_mat,
         2: "#lagoon",
         3: "#river",
         4: "#path",
