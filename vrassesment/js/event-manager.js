@@ -1,17 +1,17 @@
 AFRAME.registerComponent('event-manager', {
     init: function () {
-      this.con_mat
-      this.for_mat
       //load all the textures, not using image paths for performance
-      this.container_tex= new THREE.TextureLoader().load("assets/thumbnails/container_t.JPG", 	function ( texture ) {this.con_mat = new THREE.MeshBasicMaterial( {map: texture} );});
-      console.log(this.con_mat)
-      this.forest_tex= new THREE.TextureLoader().load("assets/thumbnails/forest_t.JPG", 	function ( texture ) {this.for_mat = new THREE.MeshBasicMaterial( {map: texture} );});
-      console.log(this.for_mat)
+      this.container_tex= new THREE.TextureLoader().load("assets/thumbnails/container_t.JPG");
+      this.forest_tex= new THREE.TextureLoader().load("assets/thumbnails/forest_t.JPG");
       this.lagoon_tex = new THREE.TextureLoader().load("assets/thumbnails/lagoon_t.JPG");
       this.river_tex= new THREE.TextureLoader().load("assets/thumbnails/river_t.JPG");
       this.path_tex= new THREE.TextureLoader().load("assets/thumbnails/path_t.JPG");
       this.woods_tex= new THREE.TextureLoader().load("assets/thumbnails/woods_t.JPG");
       this.seat_tex= new THREE.TextureLoader().load("assets/thumbnails/seat_t.JPG");
+      this.con_mat = new THREE.MeshBasicMaterial( {map: texture} );
+      console.log(this.con_mat)
+      this.for_mat = new THREE.MeshBasicMaterial( {map: texture} );
+      console.log(this.for_mat)
       //scene element 
       this.scene = document.querySelector("a-scene");
       this.scene.renderer.initTexture(this.container_tex);
