@@ -74,7 +74,7 @@ AFRAME.registerComponent('button', {
     },
   
     bindMethods: function () {
-      //event handler boilerplate
+      //event handling
       this.stateChanged = this.stateChanged.bind(this);
       this.onPressedStarted = this.onPressedStarted.bind(this);
       this.onPressedEnded = this.onPressedEnded.bind(this);

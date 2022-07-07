@@ -3,7 +3,7 @@ AFRAME.registerComponent('highlight', {
     init: function () {
       //get buttons
       var buttonEls = this.buttonEls = this.el.querySelectorAll('.menu-button');
-      //event handler boilerplate
+      //event handling
       this.onClick = this.onClick.bind(this);
       this.onMouseEnter = this.onMouseEnter.bind(this);
       this.onMouseLeave = this.onMouseLeave.bind(this);

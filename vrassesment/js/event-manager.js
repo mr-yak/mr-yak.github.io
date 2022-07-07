@@ -13,7 +13,7 @@ AFRAME.registerComponent('event-manager', {
       //init pic id and pic count
       this.picId = 0;
       this.picCount = 7;
-      //event handler boilerplate
+      //event handling
       this.bindMethods();
 
       //get the text elements
@@ -108,7 +108,7 @@ AFRAME.registerComponent('event-manager', {
       //init text positions
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
-      print(this.scene.renderer);
+      console.log(this.scene.renderer);
       this.scene.renderer.initTexture(this.container_tex);
       this.scene.renderer.initTexture(this.forest_tex);
       this.scene.renderer.initTexture(this.lagoon_tex);
@@ -120,7 +120,7 @@ AFRAME.registerComponent('event-manager', {
     
   
     bindMethods: function () {
-      //onclick handler boilerplate
+      //onclick handling
       this.onClick = this.onClick.bind(this);
     },
   
