@@ -8,14 +8,15 @@ AFRAME.registerComponent('event-manager', {
       this.path_tex= new THREE.TextureLoader().load("assets/thumbnails/path_t.JPG");
       this.woods_tex= new THREE.TextureLoader().load("assets/thumbnails/woods_t.JPG");
       this.seat_tex= new THREE.TextureLoader().load("assets/thumbnails/seat_t.JPG");
-      this.con_mat = new THREE.MeshBasicMaterial( {map: this.container_tex} );
-      console.log(this.con_mat)
-      this.for_mat = new THREE.MeshBasicMaterial( {map: this.forest_tex} );
-      console.log(this.for_mat)
       //scene element 
       this.scene = document.querySelector("a-scene");
       this.scene.renderer.initTexture(this.container_tex);
       this.scene.renderer.initTexture(this.forest_tex);
+      this.scene.renderer.initTexture(this.lagoon_tex);
+      this.scene.renderer.initTexture(this.river_tex);
+      this.scene.renderer.initTexture(this.path_tex);
+      this.scene.renderer.initTexture(this.woods_tex);
+      this.scene.renderer.initTexture(this.seat_tex);
       //init pic id and pic count
       this.picId = 0;
       this.picCount = 7;
@@ -48,8 +49,8 @@ AFRAME.registerComponent('event-manager', {
         6: "galleryhtml/seat.html"
       };
       this.thumbnailMap = {
-        0: this.con_mat,
-        1: this.for_mat,
+        0: this.container_tex,
+        1: this.forest_tex,
         2: "#lagoon",
         3: "#river",
         4: "#path",
