@@ -122,7 +122,7 @@ AFRAME.registerComponent('event-manager', {
         this.scene.renderer.initTexture(this.seat_tex);
         //change camera position
         this.scene.camera.position.z = 0.5;
-      }, 200)
+      }, 300)
     },
   
     bindMethods: function () {
