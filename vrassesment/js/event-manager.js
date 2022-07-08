@@ -120,7 +120,9 @@ AFRAME.registerComponent('event-manager', {
         this.scene.renderer.initTexture(this.path_tex);
         this.scene.renderer.initTexture(this.woods_tex);
         this.scene.renderer.initTexture(this.seat_tex);
-      }, 100)
+        //change camera position.
+        this.scene.camera.position.z = 0.5;
+      }, 200)
     },
   
     bindMethods: function () {
