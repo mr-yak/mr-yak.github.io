@@ -1,15 +1,43 @@
 AFRAME.registerComponent('event-manager', {
     init: function () {
-      //load all the textures, not using image paths for performance
-      this.container_tex= new THREE.TextureLoader().load("assets/thumbnails/container_t.JPG");
-      this.forest_tex= new THREE.TextureLoader().load("assets/thumbnails/forest_t.JPG");
-      this.lagoon_tex = new THREE.TextureLoader().load("assets/thumbnails/lagoon_t.JPG");
-      this.river_tex= new THREE.TextureLoader().load("assets/thumbnails/river_t.JPG");
-      this.path_tex= new THREE.TextureLoader().load("assets/thumbnails/path_t.JPG");
-      this.woods_tex= new THREE.TextureLoader().load("assets/thumbnails/woods_t.JPG");
-      this.seat_tex= new THREE.TextureLoader().load("assets/thumbnails/seat_t.JPG");
       //scene element 
       this.scene = document.querySelector("a-scene");
+      //load all the textures, not using image paths for performance
+      this.container_tex= new THREE.TextureLoader().load("assets/thumbnails/container_t.JPG",
+        function (texture) {
+          this.scene.initTexture(texture)
+        }
+      );
+      this.forest_tex= new THREE.TextureLoader().load("assets/thumbnails/forest_t.JPG",
+        function (texture) {
+          this.scene.initTexture(texture)
+        }
+      );
+      this.lagoon_tex = new THREE.TextureLoader().load("assets/thumbnails/lagoon_t.JPG",
+        function (texture) {
+          this.scene.initTexture(texture)
+        }
+      );
+      this.river_tex= new THREE.TextureLoader().load("assets/thumbnails/river_t.JPG",
+        function (texture) {
+          this.scene.initTexture(texture)
+        }
+      );
+      this.path_tex= new THREE.TextureLoader().load("assets/thumbnails/path_t.JPG",
+        function (texture) {
+          this.scene.initTexture(texture)
+        }
+      );
+      this.woods_tex= new THREE.TextureLoader().load("assets/thumbnails/woods_t.JPG",
+        function (texture) {
+          this.scene.initTexture(texture)
+        }
+      );
+      this.seat_tex= new THREE.TextureLoader().load("assets/thumbnails/seat_t.JPG",
+        function (texture) {
+          this.scene.initTexture(texture)
+        }
+      );
       //init pic id and pic count
       this.picId = 0;
       this.picCount = 7;
@@ -113,16 +141,16 @@ AFRAME.registerComponent('event-manager', {
     update: function (){
       //initiate all the textures, loading them into memory to reduce frame drops on first load on screen
       setTimeout(() => {
-        this.scene.renderer.initTexture(this.container_tex);
+        /*this.scene.renderer.initTexture(this.container_tex);
         this.scene.renderer.initTexture(this.forest_tex);
         this.scene.renderer.initTexture(this.lagoon_tex);
         this.scene.renderer.initTexture(this.river_tex);
         this.scene.renderer.initTexture(this.path_tex);
         this.scene.renderer.initTexture(this.woods_tex);
-        this.scene.renderer.initTexture(this.seat_tex);
+        this.scene.renderer.initTexture(this.seat_tex);*/
         //change camera position
-        this.scene.camera.position.z = 0.5;
-      }, 300)
+        this.scene.camera.position.z = 0.5; 
+      }, 500)
     },
   
     bindMethods: function () {
