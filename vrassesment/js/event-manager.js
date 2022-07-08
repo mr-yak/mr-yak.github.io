@@ -5,37 +5,37 @@ AFRAME.registerComponent('event-manager', {
       //load all the textures, not using image paths for performance
       this.container_tex= new THREE.TextureLoader().load("assets/thumbnails/container_t.JPG",
         function (texture) {
-          this.scene.initTexture(texture)
+          document.querySelector("a-scene").initTexture(texture)
         }
       );
       this.forest_tex= new THREE.TextureLoader().load("assets/thumbnails/forest_t.JPG",
         function (texture) {
-          this.scene.initTexture(texture)
+          document.querySelector("a-scene").initTexture(texture)
         }
       );
       this.lagoon_tex = new THREE.TextureLoader().load("assets/thumbnails/lagoon_t.JPG",
         function (texture) {
-          this.scene.initTexture(texture)
+          document.querySelector("a-scene").initTexture(texture)
         }
       );
       this.river_tex= new THREE.TextureLoader().load("assets/thumbnails/river_t.JPG",
         function (texture) {
-          this.scene.initTexture(texture)
+          document.querySelector("a-scene").initTexture(texture)
         }
       );
       this.path_tex= new THREE.TextureLoader().load("assets/thumbnails/path_t.JPG",
         function (texture) {
-          this.scene.initTexture(texture)
+          document.querySelector("a-scene").initTexture(texture)
         }
       );
       this.woods_tex= new THREE.TextureLoader().load("assets/thumbnails/woods_t.JPG",
         function (texture) {
-          this.scene.initTexture(texture)
+          document.querySelector("a-scene").initTexture(texture)
         }
       );
       this.seat_tex= new THREE.TextureLoader().load("assets/thumbnails/seat_t.JPG",
         function (texture) {
-          this.scene.initTexture(texture)
+          document.querySelector("a-scene").initTexture(texture)
         }
       );
       //init pic id and pic count
