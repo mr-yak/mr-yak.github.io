@@ -138,20 +138,6 @@ AFRAME.registerComponent('event-manager', {
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
     },
     
-    update: function (){
-      //initiate all the textures, loading them into memory to reduce frame drops on first load on screen
-      setTimeout(() => {
-        /*this.scene.renderer.initTexture(this.container_tex);
-        this.scene.renderer.initTexture(this.forest_tex);
-        this.scene.renderer.initTexture(this.lagoon_tex);
-        this.scene.renderer.initTexture(this.river_tex);
-        this.scene.renderer.initTexture(this.path_tex);
-        this.scene.renderer.initTexture(this.woods_tex);
-        this.scene.renderer.initTexture(this.seat_tex);*/
-        //change camera position
-        this.scene.camera.position.z = 0.5; 
-      }, 500)
-    },
   
     bindMethods: function () {
       //onclick handling
