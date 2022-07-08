@@ -15,13 +15,10 @@
     </head>
     <body>
         <a-scene cursor="rayOrigin: mouse;" raycaster="objects: .raycastable" stats>
-          <a-assets>
-            <img id="night" src="assets/misc/stars.jpg">
-          </a-assets>    
           <!--Background-->
             <!--camera -->
             <a-camera look-controls="true" wasd-controls="true" position="0 1.6 0"></a-camera>
-            <a-sky src="#night" rotation="0 0 0"></a-sky>
+            <a-sky src="assets/misc/stars.jpg" rotation="0 0 0"></a-sky>
             <!--Screen-->
             <a-entity
               id="photoPlane"
