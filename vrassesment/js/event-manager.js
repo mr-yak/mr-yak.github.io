@@ -1,5 +1,6 @@
 AFRAME.registerComponent('event-manager', {
     init: function () {
+      document.querySelector("a-camera").object3D.position.z = -10 
       //scene element 
       this.scene = document.querySelector("a-scene");
       //load all the textures, not using image paths for performance
@@ -136,14 +137,15 @@ AFRAME.registerComponent('event-manager', {
       //init text positions
       this.zoneTXT.setAttribute('position', this.areaPosMap[this.picId]);
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
+
+      document.onreadystatechange = function () {
+        if (document.readyState === 'complete') {
+          document.querySelector("a-camera").object3D.position.z = 0.5 
+        }
+      }
     },
-    
-    update: function (){
-      document.querySelector("a-camera").object3D.position.z = -10 
-      setTimeout(() => {
-        document.querySelector("a-camera").object3D.position.z = 0.5 
-      }, 8000)
-    },
+
+
   
     bindMethods: function () {
       //onclick handling
