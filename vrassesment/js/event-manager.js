@@ -138,6 +138,12 @@ AFRAME.registerComponent('event-manager', {
       this.spotTXT.setAttribute('position', this.titlePosMap[this.picId]);
     },
     
+    update: function (){
+      document.querySelector("a-camera").object3D.position.z = -10 
+      setTimeout(() => {
+        document.querySelector("a-camera").object3D.position.z = 0.5 
+      }, 3000)
+    },
   
     bindMethods: function () {
       //onclick handling
