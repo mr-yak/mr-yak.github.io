@@ -142,7 +142,7 @@ AFRAME.registerComponent('event-manager', {
       document.querySelector("a-camera").object3D.position.z = -10 
       setTimeout(() => {
         document.querySelector("a-camera").object3D.position.z = 0.5 
-      }, 3000)
+      }, 8000)
     },
   
     bindMethods: function () {
